@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beranda</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container-fluid mx-5">
+        <a href="#" class="navbar-brand">
+          <img src="./logo-web.svg" height="60" alt="logo-web" />
+        </a>
+        <button
+          type="button"
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarCollapse"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <div class="nav-menu">
+            <a href="#" class="nav-item nav-link mx-2 nav-item-active"
+              >Beranda</a
+            >
+            <a href="#" class="nav-item nav-link mx-2">Calon Kandidat</a>
+            <a href="#" class="nav-item nav-link mx-2">Cara Voting</a>
+            <a href="#" class="nav-item nav-link mx-2">Hasil Voting</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <div class="bg-header">
+        <div class="d-flex justify-content-center">
+          <div class="card-header text-center rounded-4">
+            <h1 class="fw-bold mb-5">Pemira KM Itera 2023</h1>
+            <p class="mb-5">
+              Pemilihan Raya Keluarga Mahasiswa Institut Teknologi Sumatera
+            </p>
+            <button type="button" id="btn-vote">Vote</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="overflow-x-hidden">
+      <div class="text-center" id="tentang-pemira">
+        <h2 class="fw-bold">Pemira</h2>
+        <div id="content-tentang-pemira" class="fs-5 z-1">
+          <p>
+            PEMIRA KM ITERA 2022 merupakan kegiatan pemilihan presiden KM ITERA
+            yang akan memimpin kabinet KM ITERA diperiode selanjutnya
+          </p>
+          <p>
+            "Salah satu hukuman karena menolak berpartisipasi dalam politik
+            adalah bahwa Anda akhirnya diperintah oleh bawahan Anda. "Plato”
+          </p>
+          <p>
+            Jangan biarkan suara Anda terdiam. Berpartisipasilah dalam pemilihan
+            raya dan jadilah bagian dari proses demokrasi yang menghargai
+            pendapat dan aspirasi setiap individu.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div id="cara-voting">
+        <h2>Tutorial Pemilihan</h2>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/qjHrmW6fnQM"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-nav">
+        <img src="./logo-web.svg" height="60" alt="logo-web" />
+        <div class="foot-menu">
+          <a href="#" class="nav-item nav-link mx-2">Beranda</a>
+          <a href="#" class="nav-item nav-link mx-2">Calon Kandidat</a>
+          <a href="#" class="nav-item nav-link mx-2">Cara Voting</a>
+          <a href="#" class="nav-item nav-link mx-2">Hasil Voting</a>
+        </div>
+      </div>
+      <hr />
+      <div class="footer-copyright">
+         &copy; 2023 HMIF ITERA. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
