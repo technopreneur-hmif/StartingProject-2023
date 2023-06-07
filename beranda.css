@@ -1,12 +1,26 @@
+:root {
+  --jungle-green: #55a078;
+  --bg-green: #2b9563;
+  --mint: #f2f8f4;
+  --pearl: #eadda8;
+  --font-color-nav: #6b6b6b;
+  --yellow: #ffca07;
+}
+
 body {
-  background-color: #0a0d2d;
+  background-color: var(--bg-green);
   font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
 nav {
-  background-color: #e2ddc9;
+  background-color: var(--pearl);
   widht: 100%;
   top: 0;
+}
+
+.navbar-content {
+  margin: 0 6rem 0 6rem;
 }
 
 .nav-menu {
@@ -14,11 +28,11 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: #6b6b6b;
+  color: var(--font-color-nav);
 }
 
 .nav-item-active {
-  background-color: #ffca07;
+  background-color: var(--yellow);
   color: white;
   border-radius: 4px;
   padding: 0.5rem;
@@ -58,7 +72,7 @@ header {
 }
 
 #btn-vote {
-  background-color: #ffca07;
+  background-color: var(--yellow);
   color: white;
   padding: 1rem 8rem 1rem 8rem;
   border-radius: 1rem;
@@ -69,7 +83,7 @@ header {
 
 #tentang-pemira {
   padding: 10rem 0;
-  color: #c7c7c7;
+  color: var(--mint);
   background-image: linear-gradient(
     350deg,
     hsl(235deg 64% 11%) 0%,
@@ -78,6 +92,9 @@ header {
     hsl(23deg 85% 62%) 84%,
     hsl(54deg 100% 55%) 100%
   );
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 #tentang-pemira h2 {
@@ -96,10 +113,6 @@ header {
   margin: 2rem 0 2rem 0;
 }
 
-.image-tentang {
-  margin: -10rem 0 0 0;
-}
-
 #cara-voting {
   background-image: url("./assets/images/image-cara-voting.svg");
   background-repeat: no-repeat;
@@ -109,6 +122,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-position: center;
 }
 
 #cara-voting h2 {
@@ -116,15 +130,10 @@ header {
   font-weight: bold;
 }
 
-#cara-voting iframe {
-  border-radius: 1rem;
-  margin: 2rem 0 0 0;
-}
-
 footer {
-  background-color: #e2ddc9;
+  background-color: var(--pearl);
   padding: 4rem;
-  color: #6b6b6b;
+  color: var(--font-color-nav);
 }
 
 .footer-nav {
@@ -136,4 +145,85 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+@media (min-width: 320px) and (max-width: 450px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  nav {
+    background-color: transparent;
+  }
+
+  .navbar-content {
+    margin: 0 1rem 0 1rem;
+  }
+
+  header {
+    height: 150vw;
+  }
+
+  .bg-header {
+    height: 150vw;
+  }
+
+  .card-header {
+    padding: 12px;
+  }
+
+  .card-header h1 {
+    font-size: 40px;
+  }
+
+  #btn-vote {
+    font-size: 24px;
+  }
+
+  #tentang-pemira {
+    padding: 4rem 0;
+  }
+
+  #tentang-pemira h2 {
+    font-size: 24px;
+  }
+
+  #tentang-pemira p {
+    font-size: 16px;
+  }
+
+  #content-tentang-pemira {
+    margin: 1rem 2rem 1rem 2rem;
+  }
+
+  #cara-voting {
+    height: 100vw;
+  }
+
+  #cara-voting h2 {
+    font-size: 24px;
+  }
+
+  footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer-nav {
+    display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 450px) and (orientation: landscape) {
+}
+
+@media (min-width: 451px) and (max-width: 767px) {
+}
+
+@media (min-width: 451px) and (max-width: 767px) and (orientation: landscape) {
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 }
