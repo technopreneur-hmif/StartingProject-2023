@@ -39,7 +39,7 @@ nav {
 }
 
 header {
-  background-image: url("./assets/images/image-beranda.svg");
+  background-image: url("../assets/images/image-beranda.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -114,7 +114,7 @@ header {
 }
 
 #cara-voting {
-  background-image: url("./assets/images/image-cara-voting.svg");
+  background-image: url("../assets/images/image-cara-voting.svg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 50vw;
