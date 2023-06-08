@@ -6,6 +6,7 @@
   --font-color-nav: #6b6b6b;
   --yellow: #ffca07;
   --biru: #0d0d2d;
+  --black: #202020;
 }
 
 body {
@@ -27,7 +28,7 @@ body {
 }
 
 nav {
-  widht: 100%;
+  width: 100%;
 }
 
 .navbar-content {
@@ -36,7 +37,8 @@ nav {
   position: fixed;
   width: 100%;
   z-index: 1;
-  background-color: var(--pearl);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .navbar-content .navbar-brand {
@@ -49,7 +51,7 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: var(--font-color-nav);
+  color: var(--mint);
 }
 
 .nav-item-active {
@@ -61,7 +63,7 @@ nav {
 
 .title {
   color: white;
-  margin: 10rem 0;
+  margin: 12rem 0 6rem 0;
   display: flex;
   justify-content: center;
 }
@@ -87,7 +89,7 @@ nav {
     hsl(44deg 100% 96%) 102%,
     hsl(0deg 0% 100%) 101%
   );
-  margin: 6rem 0;
+  margin: 6rem;
   border-radius: 1.5rem;
   padding: 2rem;
 }
@@ -150,8 +152,8 @@ nav {
 }
 
 footer {
-  background-color: var(--pearl);
-  padding: 4rem;
+  background-color: var(--black);
+  padding: 2rem 6rem;
   color: var(--font-color-nav);
 }
 

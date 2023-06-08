@@ -5,6 +5,8 @@
   --pearl: #eadda8;
   --font-color-nav: #6b6b6b;
   --yellow: #ffca07;
+  --biru: #0d0d2d;
+  --black: #202020;
 }
 
 body {
@@ -20,10 +22,12 @@ nav {
 
 .navbar-content {
   top: 0;
+  padding: 10px 0;
   position: fixed;
   width: 100%;
   z-index: 1;
-  background-color: var(--pearl);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
 }
 
 .navbar-content .navbar-brand {
@@ -36,7 +40,7 @@ nav {
   display: flex;
   flex-direction: row;
   align-items: center;
-  color: var(--font-color-nav);
+  color: var(--mint);
 }
 
 .nav-item-active {
@@ -139,8 +143,8 @@ header {
 }
 
 footer {
-  background-color: var(--pearl);
-  padding: 4rem;
+  background-color: var(--black);
+  padding: 2rem 6rem;
   color: var(--font-color-nav);
 }
 
@@ -153,6 +157,10 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.kandidat-mobile {
+  display: none;
 }
 
 @media (min-width: 320px) and (max-width: 450px) {
