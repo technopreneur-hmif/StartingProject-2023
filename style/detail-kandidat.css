@@ -1,0 +1,273 @@
+:root {
+  --jungle-green: #55a078;
+  --bg-green: #2b9563;
+  --mint: #f2f8f4;
+  --pearl: #eadda8;
+  --font-color-nav: #6b6b6b;
+  --yellow: #ffca07;
+  --biru: #0d0d2d;
+  --black: #202020;
+}
+
+body {
+  background-image: linear-gradient(
+    350deg,
+    hsl(235deg 64% 11%) 14%,
+    hsl(268deg 48% 19%) 55%,
+    hsl(302deg 51% 24%) 71%,
+    hsl(323deg 66% 34%) 81%,
+    hsl(335deg 72% 44%) 88%,
+    hsl(337deg 76% 49%) 94%,
+    hsl(328deg 99% 44%) 98%,
+    hsl(322deg 100% 45%) 100%,
+    hsl(315deg 100% 44%) 101%,
+    hsl(306deg 89% 45%) 101%
+  );
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+nav {
+  width: 100%;
+}
+
+.navbar-content {
+  top: 0;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.navbar-content .navbar-brand {
+  margin-left: 6rem;
+}
+
+.nav-menu {
+  margin-left: auto;
+  margin-right: 6rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: var(--mint);
+}
+
+.nav-item-active {
+  background-color: var(--yellow);
+  color: white;
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+
+.title {
+  color: white;
+  margin: 12rem 0 6rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.title h1 {
+  font-size: 42px;
+}
+
+.kandidat-card {
+  display: flex;
+  flex-direction: row;
+  background-image: linear-gradient(
+    345deg,
+    hsl(47deg 100% 51%) 1%,
+    hsl(46deg 100% 61%) 49%,
+    hsl(45deg 100% 66%) 66%,
+    hsl(45deg 100% 71%) 76%,
+    hsl(44deg 100% 75%) 84%,
+    hsl(44deg 100% 80%) 90%,
+    hsl(44deg 100% 84%) 95%,
+    hsl(44deg 100% 88%) 98%,
+    hsl(44deg 100% 92%) 100%,
+    hsl(44deg 100% 96%) 102%,
+    hsl(0deg 0% 100%) 101%
+  );
+  margin: 6rem;
+  border-radius: 1.5rem;
+  padding: 2rem;
+}
+
+.deskripsi-kandidat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 2rem;
+}
+
+.deskripsi-kandidat h2 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.deskripsi-kandidat p {
+  font-size: 16px;
+  margin: 2rem 0;
+}
+
+#btn-lihat-detail {
+  background-color: var(--biru);
+  color: white;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 24px;
+  border: none;
+  font-weight: bold;
+  max-width: 50%;
+}
+
+.visi-misi {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  margin: 0 0 6rem 0;
+}
+
+.visi-misi-kandidat {
+  background-color: rgba(255, 202, 7, 0.2);
+  padding: 2rem;
+  width: 36%;
+  border-radius: 1.5rem;
+}
+
+.title-visi-misi {
+  color: var(--mint);
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.isi-visi-misi {
+  color: var(--mint);
+  font-size: 16px;
+}
+
+#vote {
+  display: flex;
+  justify-content: center;
+}
+
+#btn-vote {
+  background-color: var(--yellow);
+  color: var(--black);
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 24px;
+  border: none;
+  font-weight: bold;
+  max-width: 50%;
+  margin: 0 0 6rem 0;
+}
+
+footer {
+  background-color: var(--black);
+  padding: 2rem 6rem;
+  color: var(--font-color-nav);
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+}
+
+.foot-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.kandidat-mobile {
+  display: none;
+}
+
+@media (min-width: 320px) and (max-width: 450px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar-content {
+    background-color: transparent;
+  }
+
+  .navbar-content .navbar-brand {
+    margin-left: 1rem;
+  }
+
+  .navbar-content button {
+    margin-right: 1rem;
+  }
+
+  .title {
+    margin: 10rem 0 5rem 0;
+  }
+
+  .title h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .kandidat-desktop {
+    display: none;
+  }
+
+  .kandidat-mobile {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .kandidat-card-mobile {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+
+  .foto-kandidat-mobile {
+    width: 320px;
+    height: 300px;
+    background-size: 344px 338px;
+    background-position: center;
+    background-image: url("../assets/images/foto-kandidat.svg");
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  #btn-lihat-detail {
+    font-size: 24px;
+    margin: 1rem 0;
+    max-width: 100%;
+  }
+
+  footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer-nav {
+    display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 450px) and (orientation: landscape) {
+}
+
+@media (min-width: 451px) and (max-width: 767px) {
+}
+
+@media (min-width: 451px) and (max-width: 767px) and (orientation: landscape) {
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}
