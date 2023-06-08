@@ -14,17 +14,25 @@ body {
 }
 
 nav {
-  background-color: var(--pearl);
   widht: 100%;
   top: 0;
 }
 
 .navbar-content {
-  margin: 0 6rem 0 6rem;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  background-color: var(--pearl);
+}
+
+.navbar-content .navbar-brand {
+  margin-left: 6rem;
 }
 
 .nav-menu {
   margin-left: auto;
+  margin-right: 6rem;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -152,12 +160,16 @@ footer {
     overflow-x: hidden;
   }
 
-  nav {
+  .navbar-content {
     background-color: transparent;
   }
 
-  .navbar-content {
-    margin: 0 1rem 0 1rem;
+  .navbar-content .navbar-brand {
+    margin-left: 1rem;
+  }
+
+  .navbar-content button {
+    margin-right: 1rem;
   }
 
   header {
