@@ -28,37 +28,68 @@ body {
 }
 
 nav {
-  width: 100%;
-}
-
-.navbar-content {
-  top: 0;
-  padding: 10px 0;
   position: fixed;
-  width: 100%;
-  z-index: 1;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 1% 5%;
+  height: 80px;
+  display: flex;
+  align-items: center;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
 }
-
-.navbar-content .navbar-brand {
-  margin-left: 6rem;
-}
-
-.nav-menu {
-  margin-left: auto;
-  margin-right: 6rem;
+nav .logo {
+  float: left;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  color: var(--mint);
+  font-size: 24px;
+  color: #fff;
 }
-
-.nav-item-active {
-  background-color: var(--yellow);
-  color: white;
-  border-radius: 4px;
+nav .links {
+  float: right;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .links li {
+  list-style: none;
+}
+nav .links a {
+  display: block;
   padding: 0.5rem;
+  font-size: 16px;
+  color: #f2f8f4;
+  text-decoration: none;
+}
+.active {
+  background-color: #ffca07;
+  border-radius: 0.5rem;
+}
+#nav-toggle {
+  position: absolute;
+  top: -100px;
+}
+nav .icon-burger {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+nav .icon-burger .line {
+  width: 30px;
+  height: 5px;
+  background-color: #fff;
+  margin: 5px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
 }
 
 .title {
@@ -170,6 +201,104 @@ footer {
 
 .kandidat-mobile {
   display: none;
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    z-index: 1;
+    padding: 0 5%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  nav .logo {
+    float: left;
+    display: flex;
+    align-items: center;
+  }
+  nav .links {
+    position: fixed;
+    float: right;
+    top: 0;
+    z-index: -10;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(#ffca07, #ff2eea);
+  }
+  nav .links li {
+    list-style: none;
+  }
+  nav .links a {
+    display: block;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 2px 2px #ffca07;
+  }
+  #nav-toggle {
+    position: absolute;
+  }
+  nav .icon-burger {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  nav .icon-burger .line {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+  }
+  @media screen and (max-width: 768px) {
+    nav .logo {
+      float: none;
+      width: auto;
+      justify-content: center;
+    }
+    nav .links {
+      float: none;
+      position: fixed;
+      z-index: -10;
+      left: 0;
+      right: 0;
+      bottom: 100%;
+      width: auto;
+      height: auto;
+      flex-direction: column;
+      justify-content: space-evenly;
+      overflow: hidden;
+      transition: all 0.5s ease-in-out;
+    }
+    nav .links a {
+      font-size: 24px;
+    }
+    nav :checked ~ .links {
+      bottom: 0;
+    }
+    nav .icon-burger {
+      display: block;
+    }
+    nav :checked ~ .icon-burger .line:nth-child(1) {
+      transform: translateY(10px) rotate(225deg);
+    }
+    nav :checked ~ .icon-burger .line:nth-child(3) {
+      transform: translateY(-10px) rotate(-225deg);
+    }
+    nav :checked ~ .icon-burger .line:nth-child(2) {
+      opacity: 0;
+    }
+  }
 }
 
 @media (min-width: 320px) and (max-width: 450px) {

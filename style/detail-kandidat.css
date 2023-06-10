@@ -9,6 +9,10 @@
   --black: #202020;
 }
 
+* {
+  font-family: "Poppins", sans-serif;
+}
+
 body {
   background-image: linear-gradient(
     350deg,
@@ -23,7 +27,6 @@ body {
     hsl(315deg 100% 44%) 101%,
     hsl(306deg 89% 45%) 101%
   );
-  font-family: "Poppins", sans-serif;
   overflow-x: hidden;
 }
 
@@ -63,10 +66,14 @@ nav .links li {
 }
 nav .links a {
   display: block;
-  padding: 1em;
+  padding: 0.5rem;
   font-size: 16px;
-  color: var(--mint);
+  color: #f2f8f4;
   text-decoration: none;
+}
+.active {
+  background-color: #ffca07;
+  border-radius: 0.5rem;
 }
 #nav-toggle {
   position: absolute;
