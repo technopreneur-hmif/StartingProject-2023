@@ -92,15 +92,59 @@ nav .icon-burger .line {
   transition: all 0.3s ease-in-out;
 }
 
-#cara-voting {
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 50vw;
+.title {
+  color: white;
+  margin: 12rem 0 6rem 0;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-direction: column;
+}
+
+.title h1 {
+  font-size: 42px;
+}
+
+.kandidat-mobile {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  width: 100%;
+}
+
+.kandidat-card-mobile {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+
+.foto-kandidat-mobile {
+  width: 320px;
+  height: 300px;
+  background-size: 344px 338px;
   background-position: center;
+  background-image: url("../assets/images/foto-kandidat.svg");
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+#btn-lihat-detail {
+  font-size: 24px;
+  margin: 1rem 0;
+  max-width: 100%;
+}
+
+#cara-voting {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  width: 100%;
+  align-items: center;
+}
+
+#cara-voting iframe {
+  border-radius: 0.5rem;
+  width: 70vw;
+  height: 35vw;
 }
 
 footer {
@@ -118,10 +162,6 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
-}
-
-.kandidat-mobile {
-  display: none;
 }
 
 @media (max-width: 768px) {
