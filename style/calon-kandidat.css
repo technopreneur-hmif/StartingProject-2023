@@ -3,10 +3,10 @@
   --bg-green: #2b9563;
   --mint: #f2f8f4;
   --pearl: #eadda8;
-  --font-color-nav: #6b6b6b;
   --yellow: #ffca07;
   --biru: #0d0d2d;
   --black: #202020;
+  --purple: #ff2eea;
 }
 
 body {
@@ -44,8 +44,6 @@ nav .logo {
   float: left;
   display: flex;
   align-items: center;
-  font-size: 24px;
-  color: #fff;
 }
 nav .links {
   float: right;
@@ -65,12 +63,13 @@ nav .links a {
   display: block;
   padding: 0.5rem;
   font-size: 16px;
-  color: #f2f8f4;
+  color: var(--mint);
   text-decoration: none;
 }
-.active {
-  background-color: #ffca07;
+.active-nav {
+  background-color: var(--yellow);
   border-radius: 0.5rem;
+  color: var(--black);
 }
 #nav-toggle {
   position: absolute;
@@ -86,7 +85,7 @@ nav .icon-burger {
 nav .icon-burger .line {
   width: 30px;
   height: 5px;
-  background-color: #fff;
+  background-color: var(--mint);
   margin: 5px;
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
@@ -185,7 +184,7 @@ nav .icon-burger .line {
 footer {
   background-color: var(--black);
   padding: 2rem 6rem;
-  color: var(--font-color-nav);
+  color: var(--pearl);
 }
 
 .footer-nav {
@@ -229,7 +228,7 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-image: linear-gradient(#ffca07, #ff2eea);
+    background-image: linear-gradient(var(--yellow), var(--purple));
   }
   nav .links li {
     list-style: none;
@@ -281,7 +280,17 @@ footer {
       transition: all 0.5s ease-in-out;
     }
     nav .links a {
-      font-size: 24px;
+      font-size: 32px;
+      text-align: center;
+    }
+    .active-nav {
+      background: linear-gradient(
+        90deg,
+        rgba(255, 202, 7, 1) 0%,
+        rgba(255, 202, 7, 0) 86%
+      );
+      width: 100vw;
+      border-radius: 0;
     }
     nav :checked ~ .links {
       bottom: 0;

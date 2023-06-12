@@ -3,10 +3,10 @@
   --bg-green: #2b9563;
   --mint: #f2f8f4;
   --pearl: #eadda8;
-  --font-color-nav: #6b6b6b;
   --yellow: #ffca07;
   --biru: #0d0d2d;
   --black: #202020;
+  --purple: #ff2eea;
 }
 
 body {
@@ -32,8 +32,6 @@ nav .logo {
   float: left;
   display: flex;
   align-items: center;
-  font-size: 24px;
-  color: #fff;
 }
 nav .links {
   float: right;
@@ -53,12 +51,13 @@ nav .links a {
   display: block;
   padding: 0.5rem;
   font-size: 16px;
-  color: #f2f8f4;
+  color: var(--mint);
   text-decoration: none;
 }
-.active {
-  background-color: #ffca07;
+.active-nav {
+  background-color: var(--yellow);
   border-radius: 0.5rem;
+  color: var(--black);
 }
 #nav-toggle {
   position: absolute;
@@ -74,7 +73,7 @@ nav .icon-burger {
 nav .icon-burger .line {
   width: 30px;
   height: 5px;
-  background-color: #fff;
+  background-color: var(--mint);
   margin: 5px;
   border-radius: 3px;
   transition: all 0.3s ease-in-out;
@@ -85,11 +84,11 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 50vw;
+  height: 60vw;
 }
 
 .bg-header {
-  height: 50vw;
+  height: 60vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -159,12 +158,19 @@ header {
   background-image: url("../assets/images/image-cara-voting.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 50vw;
+  height: 70vw;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-position: center;
+  width: 100%;
+}
+
+#cara-voting iframe {
+  border-radius: 0.5rem;
+  width: 800px;
+  height: 457px;
 }
 
 #cara-voting h2 {
@@ -175,7 +181,7 @@ header {
 footer {
   background-color: var(--black);
   padding: 2rem 6rem;
-  color: var(--font-color-nav);
+  color: var(--pearl);
 }
 
 .footer-nav {
@@ -193,7 +199,7 @@ footer {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   nav {
     position: fixed;
     z-index: 1;
@@ -219,7 +225,7 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-image: linear-gradient(#ffca07, #ff2eea);
+    background-image: linear-gradient(var(--yellow), var(--purple));
   }
   nav .links li {
     list-style: none;
@@ -250,7 +256,7 @@ footer {
     transition: all 0.3s ease-in-out;
     z-index: 100;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     nav .logo {
       float: none;
       width: auto;
@@ -271,7 +277,17 @@ footer {
       transition: all 0.5s ease-in-out;
     }
     nav .links a {
-      font-size: 24px;
+      font-size: 32px;
+      text-align: center;
+    }
+    .active-nav {
+      background: linear-gradient(
+        90deg,
+        rgba(255, 202, 7, 1) 0%,
+        rgba(255, 202, 7, 0) 86%
+      );
+      width: 100vw;
+      border-radius: 0;
     }
     nav :checked ~ .links {
       bottom: 0;
@@ -289,9 +305,50 @@ footer {
       opacity: 0;
     }
   }
+  #content-tentang-pemira {
+    margin: 4rem 20rem 4rem 20rem;
+  }
 }
 
-@media (min-width: 320px) and (max-width: 450px) {
+@media screen and (max-width: 768px) {
+  header {
+    height: 70vw;
+  }
+
+  .bg-header {
+    height: 70vw;
+  }
+  .card-header {
+    padding: 10px;
+    margin: 0 16rem;
+  }
+
+  .card-header h1 {
+    font-size: 48px;
+  }
+
+  .card-header p {
+    font-size: 16px;
+  }
+
+  #content-tentang-pemira {
+    margin: 4rem 16rem;
+  }
+
+  #cara-voting iframe {
+    width: 530px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 575px) {
+  #cara-voting iframe {
+    width: 390px;
+    height: 221px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 424px) {
   body {
     overflow-x: hidden;
   }
@@ -336,6 +393,11 @@ footer {
     height: 100vw;
   }
 
+  #cara-voting iframe {
+    width: 300px;
+    height: 158px;
+  }
+
   #cara-voting h2 {
     font-size: 24px;
   }
@@ -347,19 +409,4 @@ footer {
   .footer-nav {
     display: none;
   }
-}
-
-@media (min-width: 320px) and (max-width: 450px) and (orientation: landscape) {
-}
-
-@media (min-width: 451px) and (max-width: 767px) {
-}
-
-@media (min-width: 451px) and (max-width: 767px) and (orientation: landscape) {
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-}
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 }
