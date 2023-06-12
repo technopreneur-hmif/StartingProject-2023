@@ -213,7 +213,7 @@ footer {
   align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   nav {
     position: fixed;
     z-index: 1;
@@ -270,7 +270,7 @@ footer {
     transition: all 0.3s ease-in-out;
     z-index: 100;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1024px) {
     nav .logo {
       float: none;
       width: auto;
@@ -318,6 +318,38 @@ footer {
     nav :checked ~ .icon-burger .line:nth-child(2) {
       opacity: 0;
     }
+  }
+}
+
+@media (max-width: 990px) {
+  .kandidat-card {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .kandidat-card {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0.4rem;
+    border-radius: 1rem;
+    padding: 0rem;
+  }
+
+  .visi-misi {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .visi-misi-kandidat {
+    background-color: rgba(255, 202, 7, 0.2);
+    padding: 2rem;
+    width: 90%;
+    border-radius: 1rem;
   }
 }
 
