@@ -92,6 +92,13 @@ nav .icon-burger .line {
   transition: all 0.3s ease-in-out;
 }
 
+.container {
+  width: 800px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .title {
   color: white;
   margin: 12rem 0 6rem 0;
@@ -105,21 +112,21 @@ nav .icon-burger .line {
 
 .kandidat-mobile {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: row;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .kandidat-card-mobile {
   display: flex;
   justify-content: center;
-  margin: 1rem;
 }
 
 .foto-kandidat-mobile {
-  width: 320px;
-  height: 300px;
-  background-size: 344px 338px;
+  width: 248px;
+  height: 268px;
+  background-size: 248px 268px;
   background-position: center;
   background-image: url("../assets/images/foto-kandidat.svg");
   display: flex;
@@ -128,29 +135,35 @@ nav .icon-burger .line {
 }
 
 #btn-lihat-detail {
-  font-size: 24px;
-  margin: 1rem 0;
-  max-width: 100%;
+  background-color: #ffca07;
+  color: #200707;
+  padding: 20px 50px;
+  border-radius: 16px;
+  font-size: 16px;
+  border: none;
+  font-weight: bold;
+  margin: 2rem;
 }
 
 #cara-voting {
   display: flex;
   justify-content: center;
-  margin: 1rem;
+  margin: 2rem 0;
   width: 100%;
   align-items: center;
 }
 
 #cara-voting iframe {
   border-radius: 0.5rem;
-  width: 70vw;
-  height: 35vw;
+  width: 800px;
+  height: 457px;
 }
 
 footer {
   background-color: var(--black);
   padding: 2rem 6rem;
   color: var(--font-color-nav);
+  bottom: 0;
 }
 
 .footer-nav {
@@ -164,7 +177,7 @@ footer {
   align-items: center;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   nav {
     position: fixed;
     z-index: 1;
@@ -221,7 +234,7 @@ footer {
     transition: all 0.3s ease-in-out;
     z-index: 100;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1023px) {
     nav .logo {
       float: none;
       width: auto;
@@ -260,37 +273,92 @@ footer {
       opacity: 0;
     }
   }
+
+  .container {
+    width: 600px;
+  }
+
+  .foto-kandidat-mobile {
+    width: 186px;
+    height: 189px;
+    background-size: 186px 189px;
+  }
+
+  #btn-lihat-detail {
+    padding: 10px 35px;
+  }
+
+  #cara-voting iframe {
+    width: 600px;
+    height: 343px;
+  }
 }
 
-@media (min-width: 320px) and (max-width: 450px) {
+@media screen and (max-width: 768px) {
+  .container {
+    width: 550px;
+  }
+
+  .foto-kandidat-mobile {
+    width: 230px;
+    height: 230px;
+    background-size: 230px 230px;
+    margin: 10px 0;
+  }
+
+  #cara-voting iframe {
+    width: 530px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 425px) and (max-width: 575px) {
+  .container {
+    width: 400px;
+  }
+
+  #cara-voting iframe {
+    width: 390px;
+    height: 221px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 424px) {
   body {
     overflow-x: hidden;
+  }
+
+  .container {
+    width: 300px;
+  }
+
+  .title {
+    margin: 8rem 0 2rem 0;
+  }
+
+  .foto-kandidat-mobile {
+    width: 130px;
+    height: 130px;
+    background-size: 130px 130px;
+    margin: 10px 0;
+  }
+
+  #btn-lihat-detail {
+    padding: 4px 24px;
+    margin: 1rem;
+    border-radius: 8px;
+  }
+
+  #cara-voting iframe {
+    width: 300px;
+    height: 158px;
   }
 
   footer {
     padding: 2rem 1rem;
   }
 
-  #cara-voting {
-    height: 100vw;
-  }
-
   .footer-nav {
     display: none;
   }
-}
-
-@media (min-width: 320px) and (max-width: 450px) and (orientation: landscape) {
-}
-
-@media (min-width: 451px) and (max-width: 767px) {
-}
-
-@media (min-width: 451px) and (max-width: 767px) and (orientation: landscape) {
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-}
-
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 }

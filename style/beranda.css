@@ -296,18 +296,6 @@ footer {
     overflow-x: hidden;
   }
 
-  .navbar-content {
-    background-color: transparent;
-  }
-
-  .navbar-content .navbar-brand {
-    margin-left: 1rem;
-  }
-
-  .navbar-content button {
-    margin-right: 1rem;
-  }
-
   header {
     height: 180vw;
   }
