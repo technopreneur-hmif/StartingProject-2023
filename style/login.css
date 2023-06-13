@@ -21,7 +21,6 @@ body {
   background-size: cover;
   background-position: center;
   overflow-x: hidden;
-  height: 80vw;
   font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
@@ -31,8 +30,7 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 100vh;
-  margin: 120px 0 0 0;
+  margin: 10rem 0;
 }
 
 .logo-website {
@@ -41,12 +39,12 @@ body {
 }
 
 .logo-website img {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
 }
 
 .container {
-  width: 400px;
+  max-width: 500px;
   margin: 2rem 0;
   padding: 36px 48px 48px 48px;
   background: rgba(0, 28, 70, 0.12);
@@ -118,4 +116,17 @@ button {
 .btn--form:hover {
   background-color: #fdf2e9;
   color: var(--yellow);
+}
+
+@media screen and (max-width: 768px) {
+  .login {
+    margin: 6rem 0;
+  }
+  .container {
+    margin: 1rem;
+    padding: 36px 12px;
+  }
+  .btn--form {
+    padding: 16px;
+  }
 }
