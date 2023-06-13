@@ -25,6 +25,7 @@ body {
   );
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+  margin: 0;
 }
 
 nav {
@@ -196,6 +197,13 @@ footer {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 20px;
+  margin-left: 20px;
+}
+
+.foot-menu a {
+  text-decoration: none;
+  color: var(--pearl);
 }
 
 .kandidat-mobile {
@@ -310,6 +318,7 @@ footer {
   }
   .container {
     width: 100%;
+    padding: 0;
   }
   .kandidat-card {
     margin: 4rem;
@@ -328,6 +337,7 @@ footer {
 @media (max-width: 699) {
   .container {
     width: 100%;
+    padding: 0;
   }
   .kandidat-card {
     margin: 1rem;
