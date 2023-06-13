@@ -6,14 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beranda</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    />
     <link rel="stylesheet" href="../style/beranda.css" />
   </head>
   <body>
-    <div class="container-fluid p-0 overflow-x-hidden">
+    <div class="container">
       <nav>
         <input id="nav-toggle" type="checkbox" />
         <img
@@ -39,21 +35,17 @@
 
       <header>
         <div class="bg-header">
-          <div class="d-flex justify-content-center">
-            <div class="card-header text-center rounded-4">
-              <h1 class="fw-bold mb-5">Pemira KM Itera 2023</h1>
-              <p class="mb-5">
-                Pemilihan Raya Keluarga Mahasiswa Institut Teknologi Sumatera
-              </p>
-              <button type="button" id="btn-vote">Vote</button>
-            </div>
+          <div class="card-header">
+            <h1>Pemira KM Itera 2023</h1>
+            <p>Pemilihan Raya Keluarga Mahasiswa Institut Teknologi Sumatera</p>
+            <button type="button" id="btn-vote">Vote</button>
           </div>
         </div>
       </header>
 
-      <section class="overflow-x-hidden">
-        <div class="text-center" id="tentang-pemira">
-          <h2 class="fw-bold">Pemira</h2>
+      <section>
+        <div id="tentang-pemira">
+          <h2>Pemira</h2>
           <div id="content-tentang-pemira">
             <p>
               PEMIRA KM ITERA 2022 merupakan kegiatan pemilihan presiden KM
@@ -77,7 +69,7 @@
           <h2>Tutorial Pemilihan</h2>
           <div class="embed-responsive embed-responsive-16by9">
             <iframe
-              class="embed-responsive-item rounded-4 mt-5"
+              class="embed-responsive-item"
               src="https://www.youtube.com/embed/qjHrmW6fnQM"
               title="YouTube video player"
               frameborder="0"
@@ -92,10 +84,10 @@
         <div class="footer-nav">
           <img src="../assets/images/logo-web.svg" height="60" alt="logo-web" />
           <div class="foot-menu">
-            <a href="#" class="nav-item nav-link mx-2">Beranda</a>
-            <a href="#" class="nav-item nav-link mx-2">Calon Kandidat</a>
-            <a href="#" class="nav-item nav-link mx-2">Cara Voting</a>
-            <a href="#" class="nav-item nav-link mx-2">Hasil Voting</a>
+            <a href="#" class="nav-item nav-link">Beranda</a>
+            <a href="#" class="nav-item nav-link">Calon Kandidat</a>
+            <a href="#" class="nav-item nav-link">Cara Voting</a>
+            <a href="#" class="nav-item nav-link">Hasil Voting</a>
           </div>
         </div>
         <hr />
