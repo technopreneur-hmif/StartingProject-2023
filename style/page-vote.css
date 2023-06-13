@@ -134,15 +134,78 @@ nav .icon-burger .line {
   border-radius: 16px;
 }
 
-#btn-lihat-detail {
+#btn-vote {
   background-color: #ffca07;
   color: #200707;
-  padding: 20px 50px;
+  padding: 16px 50px;
   border-radius: 16px;
   font-size: 16px;
   border: none;
   font-weight: bold;
   margin: 2rem;
+}
+
+.popup {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  top: -150%;
+  max-width: 380px;
+  width: 80%;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.1);
+  transform: translate(-50%, -50%) scale(1.2);
+  transition: top 0s 0.2s ease-in-out, opacity 0.2s 0s ease-in-out,
+    transform 0.2s 0s ease-in-out;
+  position: absolute;
+  left: 50%;
+}
+.popup.show {
+  top: 50%;
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0s 0s ease-in-out, opacity 0.2s 0s ease-in-out,
+    transform 0.2s 0s ease-in-out;
+}
+.popup :is(.field) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.popup .content {
+  margin: 20px 0;
+}
+.content p {
+  font-size: 16px;
+  margin: 20px 0;
+}
+.content .icons a {
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+.btn-all {
+  background-color: #ffca07;
+  color: #200707;
+  width: 50%;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: none;
+}
+
+.close {
+  width: 50%;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: none;
 }
 
 #cara-voting {
@@ -293,7 +356,7 @@ footer {
     background-size: 186px 189px;
   }
 
-  #btn-lihat-detail {
+  #btn-vote {
     padding: 10px 35px;
   }
 
@@ -352,7 +415,7 @@ footer {
     margin: 10px 0;
   }
 
-  #btn-lihat-detail {
+  #btn-vote {
     padding: 4px 24px;
     margin: 1rem;
     border-radius: 8px;
