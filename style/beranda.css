@@ -93,6 +93,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
 }
 
 .card-header {
@@ -316,6 +317,16 @@ footer {
       opacity: 0;
     }
   }
+  header {
+    height: 80vw;
+  }
+
+  .bg-header {
+    height: 80vw;
+  }
+  .card-header {
+    margin: 0 10rem;
+  }
   #content-tentang-pemira {
     margin: 4rem 20rem 4rem 20rem;
   }
@@ -323,15 +334,15 @@ footer {
 
 @media screen and (max-width: 768px) {
   header {
-    height: 70vw;
+    height: 100vw;
   }
 
   .bg-header {
-    height: 70vw;
+    height: 100vw;
   }
   .card-header {
     padding: 10px;
-    margin: 0 16rem;
+    margin: 0 8rem;
   }
 
   .card-header h1 {
@@ -342,8 +353,12 @@ footer {
     font-size: 16px;
   }
 
+  #tentang-pemira {
+    width: 100%;
+  }
+
   #content-tentang-pemira {
-    margin: 4rem 16rem;
+    margin: 4rem 10rem;
   }
 
   #cara-voting iframe {
@@ -374,6 +389,7 @@ footer {
 
   .card-header {
     padding: 12px;
+    margin: 0 2rem;
   }
 
   .card-header h1 {
