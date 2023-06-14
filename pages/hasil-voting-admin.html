@@ -6,14 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hasil Voting</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    />
     <link rel="stylesheet" href="../style/hasil-voting-admin.css" />
   </head>
   <body>
-    <div class="container-fluid p-0 overflow-x-hidden">
+    <div class="container">
       <nav>
         <input id="nav-toggle" type="checkbox" />
         <img
@@ -23,12 +19,14 @@
           alt="logo-web"
         />
         <ul class="links">
-          <li><a href="./beranda.html" class="active-nav">Beranda</a></li>
+          <li><a href="./beranda.html">Beranda</a></li>
           <li>
             <a href="./calon-kandidat.html">Calon Kandidat</a>
           </li>
           <li><a href="./cara-voting.html">Cara Voting</a></li>
-          <li><a href="./hasil-voting.html">Hasil Voting</a></li>
+          <li>
+            <a href="./hasil-voting.html" class="active-nav">Hasil Voting</a>
+          </li>
         </ul>
         <label for="nav-toggle" class="icon-burger">
           <div class="line"></div>
@@ -38,62 +36,48 @@
       </nav>
 
       <section>
-        <div class="container">
+        <div class="container-hasil">
           <div class="title">
             <h1>Hasil Suara</h1>
           </div>
-          <div class="candidat">
 
-          <div class="candidat1">
-            <div class="candidat-bg1">
-             <div class="candidat-text1">
-              <h2>
-                John Dodol
-              </h2>
-              <h3>
-                Total Suara 51%
-              </h3>
-              </div>
-            </div>  
-          </div>
-            
-            <div class="candidat2">
-              <div class="candidat-bg2">
-                <div class="candidat-text2">
-                  <h2>
-                    Stefanus Agatha
-                  </h2>
-                  <h3>
-                    Total Suara 36%
-                  </h3>
+          <div class="candidat-list">
+            <div class="candidat">
+              <div class="candidat-card">
+                <div class="candidat-bg">
+                  <div class="candidat-text">
+                    <h2>John Dodol</h2>
+                    <h3>Total Suara 51%</h3>
                   </div>
-                </div>  
+                </div>
               </div>
 
-             
-            </div>
-            <div class="candidat-1">
-              <div class="candidat3">
-                <div class="candidat-bg3">
-                  <div class="candidat-text3">
-                    <h2>
-                      Sindry Rafaela
-                    </h2>
-                    <h3>
-                      Total Suara 13%
-                    </h3>
-                    </div>
-                  </div>  
+              <div class="candidat-card">
+                <div class="candidat-bg">
+                  <div class="candidat-text">
+                    <h2>John Dodol</h2>
+                    <h3>Total Suara 51%</h3>
+                  </div>
+                </div>
               </div>
 
+              <div class="candidat-card">
+                <div class="candidat-bg">
+                  <div class="candidat-text">
+                    <h2>John Dodol</h2>
+                    <h3>Total Suara 51%</h3>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
       </section>
 
       <section>
         <div class="space"></div>
       </section>
 
-   
       <footer>
         <div class="footer-nav">
           <img src="../assets/images/logo-web.svg" height="60" alt="logo-web" />
