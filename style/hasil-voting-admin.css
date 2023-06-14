@@ -1,0 +1,839 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+:root {
+  --jungle-green: #55a078;
+  --bg-green: #2b9563;
+  --mint: #f2f8f4;
+  --pearl: #eadda8;
+  --font-color-nav: #6b6b6b;
+  --yellow: #ffca07;
+  --biru: #0d0d2d;
+  --black: #202020;
+}
+
+body {
+  background: radial-gradient(
+        136.57% 57.77% at 0% -1.68%,
+        rgba(255, 24, 232, 0.85) 0%,
+        rgba(255, 24, 24, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    linear-gradient(0deg, #0a0d2d 0%, #2f0b38 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+nav {
+  font-weight: bold;
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 1% 5%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+nav .logo {
+  float: left;
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  color: #fff;
+}
+nav .links {
+  float: right;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .links li {
+  list-style: none;
+}
+nav .links a {
+  display: block;
+  padding: 0.5rem;
+  font-size: 16px;
+  color: #f2f8f4;
+  text-decoration: none;
+}
+.active-nav {
+  background-color: #ffca07;
+  border-radius: 0.5rem;
+}
+#nav-toggle {
+  position: absolute;
+  top: -100px;
+}
+nav .icon-burger {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+nav .icon-burger .line {
+  width: 30px;
+  height: 5px;
+  background-color: #fff;
+  margin: 5px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo-voting {
+  padding-top: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.title {
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.title h1 {
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+}
+
+.candidat {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.candidat1 {
+  box-sizing: border-box;
+
+  /* display: flex;
+  flex-direction: row; */
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+
+  width: 560px;
+  height: 338px;
+  left: calc(50% - 560px / 2 - 300px);
+  top: calc(50% - 338px / 2 - 405px);
+
+  background: radial-gradient(
+      78.97% 86.82% at 30.85% 16.9%,
+      rgba(255, 255, 255, 0.5) 0%,
+      rgba(255, 255, 255, 0) 100%
+    )
+    #ffca07;
+  border-radius: 12px;
+}
+
+.candidat-bg1 {
+  width: 344px;
+  height: 338px;
+
+  background: url(./assets/images/candidat-1.png), #d9d9d9;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 17px;
+
+  width: 334px;
+  height: 339px;
+
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+
+.candidat-text1 {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 35px;
+  gap: 64px;
+  margin: 25px 0px 0px 260px;
+  width: 300px;
+  text-align: right;
+  height: 288px;
+  background: radial-gradient(
+        56.55% 209.53% at 90.95% -7.18%,
+        rgba(255, 230, 0, 0.4) 0%,
+        rgba(255, 230, 0, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    rgba(255, 7, 111, 0.6);
+  border-radius: 20px;
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.candidat-text1 h2{
+    font-weight: bolder;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 64px 35px;
+    gap: 64px;
+    margin: 17px 0px 40px -1px;
+    width: 300px;
+    text-align: right;
+    height: 291px;
+}
+
+.candidat-text1 h3{
+  font-size: 130%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 35px;
+  gap: 64px;
+  margin: -178px 0px 0px 14px;
+  width: 300px;
+  text-align: right;
+  height: 288px;
+}
+
+.candidat2 {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+
+  width: 560px;
+  height: 338px;
+  left: calc(50% - 560px / 2 + 300px);
+  top: calc(50% - 338px / 2 - 405px);
+
+  background: radial-gradient(
+        78.97% 86.82% at 30.85% 16.9%,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    #ffca07;
+  border-radius: 12px;
+}
+
+.candidat-bg2 {
+  width: 344px;
+  height: 338px;
+
+  background: url(./assets/images/candidat-2.png), #d9d9d9;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.candidat-text2 {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 35px;
+  gap: 64px;
+  margin: 25px 0px 0px 260px;
+  width: 300px;
+  text-align: center;
+  height: 288px;
+  background: radial-gradient(
+        56.55% 209.53% at 90.95% -7.18%,
+        rgba(255, 230, 0, 0.4) 0%,
+        rgba(255, 230, 0, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    rgba(255, 7, 111, 0.6);
+  border-radius: 20px;
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.candidat-text2 h2{
+  font-weight: bolder;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 0px;
+  gap: 64px;
+  margin: 17px 0px 40px -1px;
+  width: 300px;
+  text-align: right;
+  height: 291px;
+}
+
+.candidat-text2 h3{
+font-size: 130%;
+color: white;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 64px 35px;
+gap: 64px;
+margin: -178px 0px 0px 14px;
+width: 300px;
+text-align: right;
+height: 288px;
+}
+
+.candidat-1{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 5rem;
+}
+
+.candidat3 {
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  gap: 24px;
+
+  width: 560px;
+  height: 338px;
+  left: calc(50% - 560px / 2 + 300px);
+  top: calc(50% - 338px / 2 - 405px);
+
+  background: radial-gradient(
+        78.97% 86.82% at 30.85% 16.9%,
+        rgba(255, 255, 255, 0.5) 0%,
+        rgba(255, 255, 255, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    #ffca07;
+  border-radius: 12px;
+}
+
+.candidat-bg3 {
+  width: 344px;
+  height: 338px;
+
+  background: url(./assets/images/candidat-3.png), #d9d9d9;
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.candidat-text3 {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 35px;
+  gap: 64px;
+  margin: 25px 0px 0px 260px;
+  width: 300px;
+  text-align: center;
+  height: 288px;
+  background: radial-gradient(
+        56.55% 209.53% at 90.95% -7.18%,
+        rgba(255, 230, 0, 0.4) 0%,
+        rgba(255, 230, 0, 0) 100%
+      )
+      /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */,
+    rgba(255, 7, 111, 0.6);
+  border-radius: 20px;
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  flex-grow: 0;
+}
+
+.candidat-text3 h2{
+  font-weight: bolder;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 0px;
+  gap: 64px;
+  margin: 17px 0px 40px -1px;
+  width: 300px;
+  text-align: right;
+  height: 291px;
+}
+
+.candidat-text3 h3{
+font-size: 130%;
+color: white;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding: 64px 35px;
+gap: 64px;
+margin: -178px 0px 0px 14px;
+width: 300px;
+text-align: right;
+height: 288px;
+}
+.space {
+  padding-top: 10rem;
+}
+
+/* .table-4 {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px;
+  gap: 64px;
+
+  
+  left: calc(50% - 1160px / 2);
+  top: 574px;
+
+  background: radial-gradient(
+        56.55% 209.53% at 90.95% -7.18%,
+        rgba(255, 230, 0, 0.6) 0%,
+        rgba(255, 230, 0, 0) 100%
+      )
+    #ff076f;
+  border-radius: 20px;
+}
+
+.table-4 h1 {
+  font-size: 24px;
+  color: white;
+}
+
+.ig a{
+  color: black;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.ig {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 26px 40px;
+  gap: 30px;
+
+  width: 482.11px;
+  height: 100px;
+
+  background: #ffca07;
+  border-radius: 16px;
+
+  /* Inside auto layout */
+
+/* flex: none;
+  order: 1;
+  flex-grow: 0;
+} */
+
+/* #cara-voting {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  width: 100%;
+  align-items: center;
+}
+
+#cara-voting iframe {
+  border-radius: 0.5rem;
+  width: 70vw;
+  height: 35vw;
+}
+
+.alur-voting {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+} */
+
+/* .accordion {
+  
+  font-weight: bold;
+  font-size: 18px;
+  margin: 20px 0 0 0;
+  border-radius: 10px;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+} */
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* .active,
+.accordion:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px 10px 0 0;
+} */
+
+/* Style the accordion panel. Note: hidden by default */
+/* .panel {
+  padding: 0 18px;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0 0 10px 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  width: 100%;
+}
+
+.accordion:after {
+   
+    content: "\276F";
+      width: 1em;
+      height: 1em;
+      text-align: center;
+      transition: all .35s;
+      float: right;
+      margin-left: 5px;
+      transform: rotate(0deg);
+  }
+  
+  .active:after {
+
+    content:  "\276F";
+    width: 1em;
+      height: 1em;
+      text-align: center;
+      transition: all .35s;
+      float: right;
+      margin-left: 5px;
+    transform: rotate(90deg);
+  } */
+
+/* .kandidat-card {
+  display: flex;
+  flex-direction: row;
+  background-image: linear-gradient(
+    345deg,
+    hsl(47deg 100% 51%) 1%,
+    hsl(46deg 100% 61%) 49%,
+    hsl(45deg 100% 66%) 66%,
+    hsl(45deg 100% 71%) 76%,
+    hsl(44deg 100% 75%) 84%,
+    hsl(44deg 100% 80%) 90%,
+    hsl(44deg 100% 84%) 95%,
+    hsl(44deg 100% 88%) 98%,
+    hsl(44deg 100% 92%) 100%,
+    hsl(44deg 100% 96%) 102%,
+    hsl(0deg 0% 100%) 101%
+  );
+  margin: 6rem;
+  border-radius: 1.5rem;
+  padding: 2rem;
+}
+
+.foto-kandidat {
+  width: 344px;
+  height: 338px;
+  background-size: 344px 338px;
+  background-position: center;
+  background-image: url("../assets/images/foto-kandidat.svg");
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.nama-kandidat {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 2rem;
+  width: 344px;
+  text-align: center;
+}
+
+.nama-kandidat h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.nama-kandidat p {
+  font-size: 16px;
+  color: white;
+}
+
+.deskripsi-kandidat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 2rem;
+}
+
+.deskripsi-kandidat h2 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.deskripsi-kandidat p {
+  font-size: 16px;
+  margin: 2rem 0;
+} */
+
+#btn-lihat-detail {
+  background-color: var(--biru);
+  color: white;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 24px;
+  border: none;
+  font-weight: bold;
+  max-width: 50%;
+}
+
+footer {
+  background-color: var(--black);
+  padding: 2rem 6rem;
+  color: var(--font-color-nav);
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+}
+
+.foot-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.kandidat-mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    z-index: 1;
+    padding: 0 5%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  nav .logo {
+    float: left;
+    display: flex;
+    align-items: center;
+  }
+  nav .links {
+    position: fixed;
+    float: right;
+    top: 0;
+    z-index: -10;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(#ffca07, #ff2eea);
+  }
+  nav .links li {
+    list-style: none;
+  }
+  nav .links a {
+    display: block;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 2px 2px #ffca07;
+  }
+  #nav-toggle {
+    position: absolute;
+  }
+  nav .icon-burger {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  nav .icon-burger .line {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+  }
+  @media screen and (max-width: 768px) {
+    nav .logo {
+      float: none;
+      width: auto;
+      justify-content: center;
+    }
+    nav .links {
+      float: none;
+      position: fixed;
+      z-index: -10;
+      left: 0;
+      right: 0;
+      bottom: 100%;
+      width: auto;
+      height: auto;
+      flex-direction: column;
+      justify-content: space-evenly;
+      overflow: hidden;
+      transition: all 0.5s ease-in-out;
+    }
+    nav .links a {
+      font-size: 24px;
+    }
+    nav :checked ~ .links {
+      bottom: 0;
+    }
+    nav .icon-burger {
+      display: block;
+    }
+    nav :checked ~ .icon-burger .line:nth-child(1) {
+      transform: translateY(10px) rotate(225deg);
+    }
+    nav :checked ~ .icon-burger .line:nth-child(3) {
+      transform: translateY(-10px) rotate(-225deg);
+    }
+    nav :checked ~ .icon-burger .line:nth-child(2) {
+      opacity: 0;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 450px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .navbar-content {
+    background-color: transparent;
+  }
+
+  .navbar-content .navbar-brand {
+    margin-left: 1rem;
+  }
+
+  .navbar-content button {
+    margin-right: 1rem;
+  }
+
+  .title {
+    margin: 8rem 0 2rem 0;
+  }
+
+  .title h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .kandidat-desktop {
+    display: none;
+  }
+
+  .kandidat-mobile {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .kandidat-card-mobile {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+  }
+
+  .foto-kandidat-mobile {
+    width: 320px;
+    height: 300px;
+    background-size: 344px 338px;
+    background-position: center;
+    background-image: url("../assets/images/foto-kandidat.svg");
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  #btn-lihat-detail {
+    font-size: 24px;
+    margin: 1rem 0;
+    max-width: 100%;
+  }
+
+  footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer-nav {
+    display: none;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 450px) and (orientation: landscape) {
+}
+
+@media (min-width: 451px) and (max-width: 767px) {
+}
+
+@media (min-width: 451px) and (max-width: 767px) and (orientation: landscape) {
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+}

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 :root {
   --jungle-green: #55a078;
   --bg-green: #2b9563;
@@ -26,6 +28,10 @@ body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
   margin: 0;
+}
+
+.container {
+  overflow-x: hidden;
 }
 
 nav {
@@ -92,6 +98,13 @@ nav .icon-burger .line {
   transition: all 0.3s ease-in-out;
 }
 
+.container-tutorial {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .title {
   color: white;
   margin: 12rem 0 6rem 0;
@@ -103,83 +116,86 @@ nav .icon-burger .line {
   font-size: 42px;
 }
 
-.kandidat-card {
-  display: flex;
-  flex-direction: row;
-  background-image: linear-gradient(
-    345deg,
-    hsl(47deg 100% 51%) 1%,
-    hsl(46deg 100% 61%) 49%,
-    hsl(45deg 100% 66%) 66%,
-    hsl(45deg 100% 71%) 76%,
-    hsl(44deg 100% 75%) 84%,
-    hsl(44deg 100% 80%) 90%,
-    hsl(44deg 100% 84%) 95%,
-    hsl(44deg 100% 88%) 98%,
-    hsl(44deg 100% 92%) 100%,
-    hsl(44deg 100% 96%) 102%,
-    hsl(0deg 0% 100%) 101%
-  );
-  margin: 8rem;
-  border-radius: 1.5rem;
-  padding: 2rem;
-}
-
-.foto-kandidat {
-  width: 344px;
-  height: 338px;
-  background-size: 344px 338px;
-  background-position: center;
-  background-image: url("../assets/images/foto-kandidat.svg");
+#cara-voting {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  margin: 1rem;
+  width: 100%;
+  align-items: center;
 }
 
-.nama-kandidat {
-  background: rgba(0, 0, 0, 0.2);
-  padding: 2rem;
-  width: 344px;
-  text-align: center;
+#cara-voting iframe {
+  border-radius: 0.5rem;
+  width: 70%;
+  height: 35vw;
 }
 
-.nama-kandidat h2 {
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-}
-
-.nama-kandidat p {
-  font-size: 16px;
-  color: white;
-}
-
-.deskripsi-kandidat {
+.alur-voting {
   display: flex;
+  justify-content: center;
+  margin: 1rem;
+  width: 100%;
+  align-items: center;
   flex-direction: column;
-  justify-content: center;
-  margin: 0 2rem;
 }
 
-.deskripsi-kandidat h2 {
+.accordion {
   font-weight: bold;
-  font-size: 24px;
-}
-
-.deskripsi-kandidat p {
-  font-size: 16px;
-  margin: 2rem 0;
-}
-
-#btn-lihat-detail {
-  background-color: var(--biru);
+  font-size: 18px;
+  margin: 20px 0 0 0;
+  border-radius: 10px;
+  background-color: transparent;
   color: white;
-  padding: 1rem 2rem 1rem 2rem;
-  border-radius: 1rem;
-  font-size: 24px;
+  cursor: pointer;
+  padding: 18px;
+  width: 70%;
+  text-align: left;
   border: none;
-  font-weight: bold;
-  max-width: 50%;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.accordion:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px 10px 0 0;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 0 0 10px 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  width: 70%;
+}
+
+.panel p {
+  padding: 18px;
+}
+
+.accordion:after {
+  content: "\276F";
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+  float: right;
+  margin-left: 5px;
+  transform: rotate(0deg);
+}
+
+.active:after {
+  content: "\276F";
+  height: 1em;
+  text-align: center;
+  transition: all 0.35s;
+  float: right;
+  margin-left: 5px;
+  transform: rotate(90deg);
 }
 
 footer {
@@ -206,14 +222,10 @@ footer {
   color: var(--pearl);
 }
 
-.kandidat-mobile {
-  display: none;
-}
-
 @media (max-width: 1024px) {
   nav {
     position: fixed;
-    z-index: 1;
+    z-index: 100;
     padding: 0 5%;
     height: 100px;
     display: flex;
@@ -230,7 +242,7 @@ footer {
     position: fixed;
     float: right;
     top: 0;
-    z-index: -10;
+    z-index: 100;
     width: 60%;
     height: 100%;
     display: flex;
@@ -316,58 +328,48 @@ footer {
       opacity: 0;
     }
   }
-  .container {
+  .container-tutorial {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #cara-voting {
     width: 100%;
-    padding: 0;
+    margin: 0;
   }
-  .kandidat-card {
-    margin: 4rem;
-    padding: 2rem;
-  }
-  .foto-kandidat {
-    width: 240px;
-    height: 240px;
-    background-size: 240px 240px;
-  }
-  .nama-kandidat {
-    padding: 0rem;
+
+  .alur-voting {
+    width: 90%;
   }
 }
 
-@media (max-width: 699px) {
-  .container {
+@media (max-width: 768px) {
+  .container-tutorial {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #cara-voting {
     width: 100%;
-    padding: 0;
+    margin: 0;
   }
-  .kandidat-card {
-    margin: 1rem;
-    padding: 2rem;
+
+  .alur-voting {
+    width: 100%;
   }
-  .foto-kandidat {
-    width: 180px;
-    height: 180px;
-    background-size: 180px 180px;
+
+  .accordion {
+    width: 100%;
   }
-  .nama-kandidat {
-    padding: 0rem;
+
+  .panel {
+    width: 100%;
   }
 }
 
-@media (min-width: 320px) and (max-width: 530px) {
+@media (min-width: 320px) and (max-width: 450px) {
   body {
     overflow-x: hidden;
-  }
-
-  .navbar-content {
-    background-color: transparent;
-  }
-
-  .navbar-content .navbar-brand {
-    margin-left: 1rem;
-  }
-
-  .navbar-content button {
-    margin-right: 1rem;
   }
 
   .title {
@@ -379,37 +381,33 @@ footer {
     font-weight: bold;
   }
 
-  .kandidat-desktop {
-    display: none;
-  }
-
-  .kandidat-mobile {
+  .container-tutorial {
     display: flex;
     justify-content: center;
     flex-direction: column;
   }
 
-  .kandidat-card-mobile {
-    display: flex;
-    justify-content: center;
-    margin: 2rem 0;
+  #cara-voting {
+    width: 100%;
+    margin: 0;
   }
 
-  .foto-kandidat-mobile {
-    width: 350px;
-    height: 240px;
-    background-size: 350px 310px;
-    background-position: center;
-    background-image: url("../assets/images/foto-kandidat.svg");
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+  #cara-voting iframe {
+    border-radius: 0.5rem;
+    width: 90%;
+    height: 180px;
   }
 
-  #btn-lihat-detail {
-    font-size: 24px;
-    margin: 1rem 0;
-    max-width: 100%;
+  .alur-voting {
+    width: 90%;
+  }
+
+  footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer-nav {
+    display: none;
   }
 
   footer {
