@@ -5,10 +5,10 @@
   --bg-green: #2b9563;
   --mint: #f2f8f4;
   --pearl: #eadda8;
-  --font-color-nav: #6b6b6b;
   --yellow: #ffca07;
   --biru: #0d0d2d;
   --black: #202020;
+  --purple: #ff2eea;
 }
 
 body {
@@ -193,22 +193,22 @@ nav .icon-burger .line {
   flex-grow: 0;
 }
 
-.candidat-text1 h2{
-    font-weight: bolder;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 64px 35px;
-    gap: 64px;
-    margin: 17px 0px 40px -1px;
-    width: 300px;
-    text-align: right;
-    height: 291px;
+.candidat-text1 h2 {
+  font-weight: bolder;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 35px;
+  gap: 64px;
+  margin: 17px 0px 40px -1px;
+  width: 300px;
+  text-align: right;
+  height: 291px;
 }
 
-.candidat-text1 h3{
+.candidat-text1 h3 {
   font-size: 130%;
   color: white;
   display: flex;
@@ -286,7 +286,7 @@ nav .icon-burger .line {
   flex-grow: 0;
 }
 
-.candidat-text2 h2{
+.candidat-text2 h2 {
   font-weight: bolder;
   color: white;
   display: flex;
@@ -301,22 +301,22 @@ nav .icon-burger .line {
   height: 291px;
 }
 
-.candidat-text2 h3{
-font-size: 130%;
-color: white;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 64px 35px;
-gap: 64px;
-margin: -178px 0px 0px 14px;
-width: 300px;
-text-align: right;
-height: 288px;
+.candidat-text2 h3 {
+  font-size: 130%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 35px;
+  gap: 64px;
+  margin: -178px 0px 0px 14px;
+  width: 300px;
+  text-align: right;
+  height: 288px;
 }
 
-.candidat-1{
+.candidat-1 {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -386,7 +386,7 @@ height: 288px;
   flex-grow: 0;
 }
 
-.candidat-text3 h2{
+.candidat-text3 h2 {
   font-weight: bolder;
   color: white;
   display: flex;
@@ -401,19 +401,19 @@ height: 288px;
   height: 291px;
 }
 
-.candidat-text3 h3{
-font-size: 130%;
-color: white;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-padding: 64px 35px;
-gap: 64px;
-margin: -178px 0px 0px 14px;
-width: 300px;
-text-align: right;
-height: 288px;
+.candidat-text3 h3 {
+  font-size: 130%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 35px;
+  gap: 64px;
+  margin: -178px 0px 0px 14px;
+  width: 300px;
+  text-align: right;
+  height: 288px;
 }
 .space {
   padding-top: 10rem;
