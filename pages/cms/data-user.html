@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CMS Starting Project</title>
 
-    <link rel="stylesheet" href="../../style/data-kandidat.css" />
+    <link rel="stylesheet" href="../../style/data-user.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
 </head>
@@ -26,7 +26,7 @@
                                 d="M13 9V3h8v6h-8ZM3 13V3h8v10H3Zm10 8V11h8v10h-8ZM3 21v-6h8v6H3Z" />
                         </svg>Dashboard</a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="./data-kandidat.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             viewBox="0 0 24 24">
                             <path fill="currentColor"
@@ -44,8 +44,9 @@
                             </g>
                         </svg>Konfirmasi Pemilih</a>
                 </li>
-                <li>
-                    <a href="./data-user.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <li class="active">
+                    <a href="./data-user.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24">
                             <g fill="currentColor">
                                 <path
                                     d="M9 11.5a1 1 0 1 0 0-2a1 1 0 0 0 0 2zm2-1a1 1 0 0 1 1-1h3a1 1 0 1 1 0 2h-3a1 1 0 0 1-1-1zm1 2a1 1 0 1 0 0 2h3a1 1 0 1 0 0-2h-3zm0 3a1 1 0 1 0 0 2h3a1 1 0 1 0 0-2h-3zm-2-2a1 1 0 1 1-2 0a1 1 0 0 1 2 0zm-1 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2z" />
@@ -75,26 +76,26 @@
                         <!-- Check settings for dependencies! -->
                         <div class="container">
                             <form action="/action_page.php">
-                                <label for="name">Nama Kandidat</label>
-                                <input type="text" id="name" name="Nama Kandidat" placeholder="Masukkan Nama">
-                            
-                                <label for="tentang">Tentang Kandidat</label>
-                                <input type="text" id="tentang" name="Tentang Kandidat" placeholder="MAsukkan Tentang">
+                                <label for="name">Nama User</label>
+                                <input type="text" id="name" name="Nama User" placeholder="Masukkan Nama">
 
-                                <label for="prodi">Prodi Kandidat</label>
-                                <input type="text" id="prodi" name="Prodi Kandidat" placeholder="Masukkan Prodi">
+                                <label for="email">Email</label>
+                                <input type="text" id="email" name="email" placeholder="Masukkan email">
 
-                                <label for="visi">Visi Kandidat</label>
-                                <input type="text" id="visi" name="Visi Kandidat" placeholder="Masukkan Visi">
+                                <label for="username">Username</label>
+                                <input type="text" id="username" name="username" placeholder="Masukkan Username">
 
-                                <label for="misi">Misi Kandidat</label>
-                                <input type="text" id="misi" name="Misi Kandidat" placeholder="Masukkan Misi">
+                                <label for="password">Password</label>
+                                <input type="text" id="password" name="password" placeholder="Masukkan Password">
 
-                                <label for="foto">Foto Kandidat</label>
-                                <input type="text" id="foto" name="Foto Kandidat" placeholder="Masukkan Link Foto">
-                              
+                                <label for="role">Role</label>
+                                <select id="role" name="role">
+                                    <option value="admin">Admin</option>
+                                    <option value="pemilih">Pemilih</option>
+                                </select>
+
                                 <button class="btn-tambah-kandidat">Tambah</button>
-                              </form>
+                            </form>
                         </div>
                     </div>
                 </div>
