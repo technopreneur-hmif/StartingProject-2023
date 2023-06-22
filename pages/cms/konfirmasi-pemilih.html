@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CMS Starting Project</title>
 
-    <link rel="stylesheet" href="../../style/data-kandidat.css" />
+    <link rel="stylesheet" href="../../style/konfirmasi-pemilih.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
 </head>
@@ -26,15 +26,15 @@
                                 d="M13 9V3h8v6h-8ZM3 13V3h8v10H3Zm10 8V11h8v10h-8ZM3 21v-6h8v6H3Z" />
                         </svg>Dashboard</a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="./data-kandidat.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                             viewBox="0 0 24 24">
                             <path fill="currentColor"
                                 d="M16 17v2H2v-2s0-4 7-4s7 4 7 4m-3.5-9.5A3.5 3.5 0 1 0 9 11a3.5 3.5 0 0 0 3.5-3.5m3.44 5.5A5.32 5.32 0 0 1 18 17v2h4v-2s0-3.63-6.06-4M15 4a3.39 3.39 0 0 0-1.93.59a5 5 0 0 1 0 5.82A3.39 3.39 0 0 0 15 11a3.5 3.5 0 0 0 0-7Z" />
                         </svg>Data Kandidat</a>
                 </li>
-                <li>
-                    <a href="./konfirmasi-pemilih.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <li class="active">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="2">
                                 <circle cx="12" cy="12" r="9" />
@@ -45,7 +45,8 @@
                         </svg>Konfirmasi Pemilih</a>
                 </li>
                 <li>
-                    <a href="./data-user.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <a href="./data-user.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24">
                             <g fill="currentColor">
                                 <path
                                     d="M9 11.5a1 1 0 1 0 0-2a1 1 0 0 0 0 2zm2-1a1 1 0 0 1 1-1h3a1 1 0 1 1 0 2h-3a1 1 0 0 1-1-1zm1 2a1 1 0 1 0 0 2h3a1 1 0 1 0 0-2h-3zm0 3a1 1 0 1 0 0 2h3a1 1 0 1 0 0-2h-3zm-2-2a1 1 0 1 1-2 0a1 1 0 0 1 2 0zm-1 4a1 1 0 1 0 0-2a1 1 0 0 0 0 2z" />
@@ -70,31 +71,67 @@
                 <div class="column">
                     <div class="card card-primary">
                         <div class="card-header">
-                            <h3 class="card-title">Input Data Kandidat</h3>
+                            <h3 class="card-title">Konfirmasi Pemilih</h3>
                         </div>
                         <!-- Check settings for dependencies! -->
                         <div class="container">
-                            <form action="/action_page.php">
-                                <label for="name">Nama Kandidat</label>
-                                <input type="text" id="name" name="Nama Kandidat" placeholder="Masukkan Nama">
-                            
-                                <label for="tentang">Tentang Kandidat</label>
-                                <input type="text" id="tentang" name="Tentang Kandidat" placeholder="MAsukkan Tentang">
-
-                                <label for="prodi">Prodi Kandidat</label>
-                                <input type="text" id="prodi" name="Prodi Kandidat" placeholder="Masukkan Prodi">
-
-                                <label for="visi">Visi Kandidat</label>
-                                <input type="text" id="visi" name="Visi Kandidat" placeholder="Masukkan Visi">
-
-                                <label for="misi">Misi Kandidat</label>
-                                <input type="text" id="misi" name="Misi Kandidat" placeholder="Masukkan Misi">
-
-                                <label for="foto">Foto Kandidat</label>
-                                <input type="text" id="foto" name="Foto Kandidat" placeholder="Masukkan Link Foto">
-                              
-                                <button class="btn-tambah-kandidat">Tambah</button>
-                              </form>
+                            <table id="customers">
+                                <tr>
+                                  <th>Company</th>
+                                  <th>Contact</th>
+                                  <th>Country</th>
+                                </tr>
+                                <tr>
+                                  <td>Alfreds Futterkiste</td>
+                                  <td>Maria Anders</td>
+                                  <td>Germany</td>
+                                </tr>
+                                <tr>
+                                  <td>Berglunds snabbköp</td>
+                                  <td>Christina Berglund</td>
+                                  <td>Sweden</td>
+                                </tr>
+                                <tr>
+                                  <td>Centro comercial Moctezuma</td>
+                                  <td>Francisco Chang</td>
+                                  <td>Mexico</td>
+                                </tr>
+                                <tr>
+                                  <td>Ernst Handel</td>
+                                  <td>Roland Mendel</td>
+                                  <td>Austria</td>
+                                </tr>
+                                <tr>
+                                  <td>Island Trading</td>
+                                  <td>Helen Bennett</td>
+                                  <td>UK</td>
+                                </tr>
+                                <tr>
+                                  <td>Königlich Essen</td>
+                                  <td>Philip Cramer</td>
+                                  <td>Germany</td>
+                                </tr>
+                                <tr>
+                                  <td>Laughing Bacchus Winecellars</td>
+                                  <td>Yoshi Tannamuri</td>
+                                  <td>Canada</td>
+                                </tr>
+                                <tr>
+                                  <td>Magazzini Alimentari Riuniti</td>
+                                  <td>Giovanni Rovelli</td>
+                                  <td>Italy</td>
+                                </tr>
+                                <tr>
+                                  <td>North/South</td>
+                                  <td>Simon Crowther</td>
+                                  <td>UK</td>
+                                </tr>
+                                <tr>
+                                  <td>Paris spécialités</td>
+                                  <td>Marie Bertrand</td>
+                                  <td>France</td>
+                                </tr>
+                              </table>
                         </div>
                     </div>
                 </div>
