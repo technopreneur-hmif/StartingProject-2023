@@ -253,6 +253,7 @@ main .box-info li .text p {
   width: 45%;
   min-height: 350px;
   margin: 0;
+  border-radius: 12px;
 }
 .pie-chart h2 {
   position: absolute;
