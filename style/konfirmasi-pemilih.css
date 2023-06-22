@@ -163,6 +163,20 @@ a:focus {
   color: white;
 }
 
+#customers .btn-confirm {
+  display: flex;
+  justify-content: center;
+}
+
+#customers button {
+  border: 0;
+  background-color: #00a36c;
+  color: white;
+  padding: 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
