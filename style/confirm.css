@@ -141,48 +141,36 @@ a:focus {
   padding: 0 20px;
 }
 
-.pemilih {
-  display: flex;
+.card-confirm {
   background-color: #fff;
-  color: #1f1f29;
   border: 2px;
   border-style: solid;
   border-color: #b8b8b8;
   border-radius: 12px;
-  padding: 4px 20px;
-  align-items: center;
-  justify-content: space-between;
-  margin: 20px 0;
+  padding: 0 20px 20px 20px;
 }
 
-.pemilih .username {
-  display: flex;
-  align-items: center;
+.btn {
+  margin-top: 80px;
 }
 
-.pemilih .user-icon {
-  padding: 8px;
-  background-color: #fff;
-  border-radius: 100%;
+.btn #btn-confirm {
+  border: 0;
+  padding: 4px 12px;
+  background-color: #2400ff;
+  color: white;
+  font-size: 12px;
+  border-radius: 4px;
   margin-right: 20px;
+  text-decoration: none;
 }
 
-.pemilih p {
-  font-size: 16px;
-}
-
-.pemilih .btn-reject {
-  color: #ff0000;
-  margin-right: 12px;
-}
-
-.pemilih .btn-accept {
-  color: #2400ff;
-}
-
-.pemilih .btn {
-  display: flex;
-  align-items: center;
+.btn #btn-reject {
+  border: 0;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 footer {
