@@ -22,7 +22,6 @@ Route::get('/', function () {
 });
 
 Route::get('/confirm', function () {
-
     return view('cms.confirm');
     
 });

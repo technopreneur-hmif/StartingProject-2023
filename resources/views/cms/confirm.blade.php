@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-<link rel="stylesheet" href="css/confirm.css">
+<link rel="stylesheet" href="./css/confirm.css">
 <section id="content-wrapper">
     <div class="row">
         <div class="column">
