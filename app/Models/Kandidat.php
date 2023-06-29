@@ -17,7 +17,7 @@ class Kandidat extends Model
         'nama_kandidat',
         'tentang_kandidat',
         'prodi_Kandidat',
-        'visi_kandidatt',
+        'visi_kandidat',
         'misi_kandidat',
         'link_foto_kandidat'
     ];
