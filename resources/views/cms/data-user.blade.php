@@ -2,7 +2,7 @@
 
 
 @section('container')
-<link rel="stylesheet" href="css/data-user.css">
+<link rel="stylesheet"  type="text/css"  href="/css/data-user.css">
         <section id="content-wrapper">
             <div class="row">
                 <div class="column">
@@ -12,7 +12,7 @@
                         </div>
                         <!-- Check settings for dependencies! -->
                         <div class="container">
-                            <form method="POST" action="{{ route('tambah-user') }}">
+                            <form method="POST" action="{{ Route('tambah-user') }}">
                                 @csrf
                                 <label for="name">Nama User</label>
                                 <input type="text" id="name" name="nama_user" placeholder="Masukkan Nama" required>

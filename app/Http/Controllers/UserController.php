@@ -26,7 +26,7 @@ class UserController extends Controller
             'role' => $request->role
         ]);
 
-        return view('data-user', ['title' => 'data-user'])->with('success', 'User berhasil ditambahkan!');
+        return view('cms.data-user', ['title' => 'data-user'])->with('success', 'User berhasil ditambahkan!');
     }
 
 }
