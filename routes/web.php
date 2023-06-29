@@ -15,19 +15,19 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', function () {
-    return view('cms',[
+    return view('cms.cms',[
         'title' => 'cms'
     ]);
 });
 
 Route::get('/confirm', function () {
 
-    return view('confirm');
+    return view('cms.confirm');
     
 });
 
 Route::get('/data-kandidat', function () {
-    return view('data-kandidat',[
+    return view('cms.data-kandidat',[
         'title' => 'data-kandidat'
     ]);
 });
@@ -41,7 +41,7 @@ Route::post('/data-user', [UserController::class ,'store'])->name('tambah-user')
 
 
 Route::get('/konfirmasi-pemilih', function () {
-    return view('konfirmasi-pemilih' ,[
+    return view('cms.konfirmasi-pemilih' ,[
         'title' => 'konfirmasi-pemilih'
     ]);
 });

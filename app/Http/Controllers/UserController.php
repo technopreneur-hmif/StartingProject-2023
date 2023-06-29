@@ -11,7 +11,7 @@ class UserController extends Controller
 {
     public function create()
     {
-        return view('data-user',[
+        return view('cms.data-user',[
             'title' => 'data-user'
         ]);
     }

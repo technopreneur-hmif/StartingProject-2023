@@ -12,7 +12,8 @@
                 </div>
                 <!-- Check settings for dependencies! -->
                 <div class="container">
-                    <form action="/action_page.php">
+                    <form action="/action_page.php" action="{{ route('tambah-user') }}>
+                        @csrf
                         <label for="name">Nama Kandidat</label>
                         <input type="text" id="name" name="Nama Kandidat" placeholder="Masukkan Nama">
                     
