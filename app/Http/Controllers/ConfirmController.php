@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Confirm;
+use Illuminate\Routing\Controller;
+use Illuminate\Foundation\Auth\User;
 use App\Http\Requests\StoreConfirmRequest;
 use App\Http\Requests\UpdateConfirmRequest;
 
@@ -13,7 +15,10 @@ class ConfirmController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::all();
+        return view('cms.confirm', compact('users') ,[
+            'title' => 'konfirmasi-pemilih'
+        ]);
     }
 
     /**

@@ -12,11 +12,13 @@
                 <!-- Check settings for dependencies! -->
                 <div class="containers">
                     <div class="card-confirm">
-                        <h2>Pemilih 1 (ganti nama pemilih)</h2>
-                        <p>Nama: Ryan Garcia</p>
-                        <p>Email : ryan.121140123@itera.ac.id</p>
-                        <p>Username : Ryan</p>
-                        <p>Role : Pemilih</p>
+                        @foreach ($users as $user)
+                        {{-- <p>{{ $loop->iteration }}</p> --}}
+                        <p>{{ $user->nama_user }}</p>
+                        <p>{{ $user->email }}</p>
+                        <p>{{ $user->username }}</p>
+                        <p>{{ $user->role }}</p>
+                        @endforeach
                         <div class="btn">
                             <a href="./konfirmasi-pemilih" id="btn-confirm">Konfirmasi</a>
                             <a href="" id="btn-reject">Tolak</a>

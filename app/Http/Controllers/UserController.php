@@ -9,6 +9,13 @@ use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
+    public function index()
+    {
+        $users = User::all();
+        return view('cms.konfirmasi-pemilih', compact('users') ,[
+            'title' => 'konfirmasi-pemilih'
+        ]);
+    }
     public function create()
     {
         return view('cms.data-user',[
