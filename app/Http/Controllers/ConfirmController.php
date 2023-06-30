@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Confirm;
+use App\Models\User;
 use Illuminate\Routing\Controller;
-use Illuminate\Foundation\Auth\User;
 use App\Http\Requests\StoreConfirmRequest;
 use App\Http\Requests\UpdateConfirmRequest;
 
@@ -21,51 +20,31 @@ class ConfirmController extends Controller
         ]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    // public function show($id)
+    // {
+    //     $user = User::where('id', $id)->first();
+    //     return view('cms.confirm', compact('user'));
+    // }
+
+    public function show($id)
+{
+    $user = User::find($id);
+    if (!$user) {
+        abort(404); // Menampilkan 404 jika pengguna tidak ditemukan
+    }
+    return view('cms.confirm', compact('user'),[
+        'title' => 'konfirmasi-pemilih'
+    ]);
+}
+
+    
+    public function destroy($id)
     {
-        //
+        $data = User::where('id', $id)->first();
+        $data->delete();
+
+        $users=User::all();
+        return redirect()->route('konfirmasi-pemilih');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(StoreConfirmRequest $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(Confirm $confirm)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Confirm $confirm)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(UpdateConfirmRequest $request, Confirm $confirm)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy(Confirm $confirm)
-    {
-        //
-    }
 }

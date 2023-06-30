@@ -15,7 +15,7 @@
     <div id="wrapper">
         <aside id="sidebar-wrapper">
             <div class="sidebar-brand">
-                <img src="images/logo-web.svg" alt="Logo-Web" width="28" />
+                <img src="/images/logo-web.svg" alt="Logo-Web" width="28" />
                 <h2>Admin</h2>
             </div>
             <ul class="sidebar-nav">
