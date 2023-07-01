@@ -26,7 +26,7 @@
 
                         <p>pemilih  {{ $loop->iteration }} </p>
                         <p></p>
-                        <p class="p ml-3">{{ $user->nama_user }}</p>
+                        <p>{{ $user->nama_user }}</p>
     
                         <div class="btn">
                             <a class="btn-reject" href="{{ Route('reject' ,$user->id)}} "><svg xmlns="http://www.w3.org/2000/svg" width="40"

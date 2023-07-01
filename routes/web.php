@@ -18,7 +18,8 @@ Route::get('/', function () {
 
 Route::get('/confirm', [ConfirmController::class ,'index'] )->name('confirm');
 Route::get('/confirm/{id}', [ConfirmController::class, 'show'])->name('confirm-page');
-// Route::delete('/confirm/{id}', [ConfirmController::class, 'destroy'])->name('reject');
+Route::delete('/confirm/{id}', [ConfirmController::class, 'destroy'])->name('reject');
+Route::post('/confirm/{id}', [UseracceptController::class, 'move'])->name('move');
 
 // Route::get('/confirm/{id}', [UseracceptController::class ,'move'] )->name('move');
 
@@ -29,7 +30,7 @@ Route::get('/confirm/{id}', [ConfirmController::class, 'show'])->name('confirm-p
 // });
 
 Route::get('/konfirmasi-pemilih', [UserController::class ,'index'] )->name('konfirmasi-pemilih');
-Route::delete('/konfirmasi-pemilih/{id}', [UseracceptController::class, 'move'])->name('move');
+// Route::post('/konfirmasi-pemilih/{id}', [UseracceptController::class, 'move'])->name('move');
 // Route::get('/konfirmasi-pemilih', function () {
 //     return view('cms.konfirmasi-pemilih' ,[
 //         'title' => 'konfirmasi-pemilih'

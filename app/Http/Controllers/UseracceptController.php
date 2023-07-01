@@ -20,6 +20,7 @@ class UseracceptController extends Controller
                 'nama_user' => $user->nama_user,
                 'email' => $user->email,
                 'username' => $user->username,
+                'password' => $user->password,
                 'role' => $user->role
             ]);
         

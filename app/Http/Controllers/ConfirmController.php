@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\useraccept;
 use Illuminate\Routing\Controller;
 use App\Http\Requests\StoreConfirmRequest;
 use App\Http\Requests\UpdateConfirmRequest;

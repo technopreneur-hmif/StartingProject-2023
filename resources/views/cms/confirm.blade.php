@@ -21,8 +21,11 @@
                                 <p>{{ $user->role }}</p>
                         
                                 <div class="btn">
-                                    <a href="{{ Route('move',$user->id)}}" id="btn-confirm">
-                                        Konfirmasi</a>
+                                    <form action="{{ Route('move',$user->id)}}" method="POST">
+                                        @csrf
+                                        <a id="btn-confirm"><button id="btn-reject">Konfirmasi</button> </a>
+                                    </form>
+
 
                                     <form action="{{Route('reject', $user->id)}}" method="POST">
                                             @method('DELETE')
