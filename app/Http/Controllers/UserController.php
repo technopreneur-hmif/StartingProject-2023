@@ -76,6 +76,14 @@ class UserController extends Controller
         ]);
         return view('cms.data-user', ['title' => 'data-user'])->with('success', 'User berhasil ditambahkan!');
     }
+    public function destroy($id)
+    {
+        $data = User::where('id', $id)->first();
+        $data->delete();
+        Session::flash('success', 'Data Arsip Berhasil Dihapus');
+        $users=User::all();
+        return redirect()->route('konfirmasi-pemilih.index',compact('users'));
+    }
 }
 
 

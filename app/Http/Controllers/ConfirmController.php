@@ -10,9 +10,6 @@ use App\Http\Requests\UpdateConfirmRequest;
 
 class ConfirmController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         $users = User::all();
@@ -37,14 +34,30 @@ class ConfirmController extends Controller
         'title' => 'konfirmasi-pemilih'
     ]);
 }
-
-    
     public function destroy($id)
     {
         $data = User::where('id', $id)->first();
         $data->delete();
 
         $users=User::all();
+        return redirect()->route('konfirmasi-pemilih.index',compact('users'));
+    }
+
+    public function move($id)
+    {
+            $user = User::find($id);
+        
+            Useraccept::create([
+                'nama_user' => $user->nama_user,
+                'email' => $user->email,
+                'username' => $user->username,
+                'password' => $user->password,
+                'role' => $user->role
+            ]);
+        
+            $user->delete();
+        
+        // Redirect kembali ke halaman konfirmasi
         return redirect()->route('konfirmasi-pemilih.index');
     }
 

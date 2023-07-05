@@ -7,19 +7,22 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
 // Route::get('/', function () {
-//     return view('cms.cms',[
-//         'title' => 'cms'
-//     ]);
+//     return view('cms.cms');
 // });
+
+// Route::get('/Vote', [UserController::class ,'ShowDashboard'] )->name('cmsdashboard');
+
 
 Route::get('/Dashboard', [UserController::class ,'ShowDashboard'] )->name('cmsdashboard');
 
 Route::get('/confirm', [ConfirmController::class ,'index'] )->name('confirm');
 Route::get('/confirm/{id}', [ConfirmController::class, 'show'])->name('confirm-page');
 Route::delete('/confirm/{id}', [ConfirmController::class, 'destroy'])->name('reject');
-Route::post('/confirm/{id}', [UseracceptController::class, 'move'])->name('move');
+Route::post('/confirm/{id}', [ConfirmController::class, 'move'])->name('move');
 
 Route::resource('konfirmasi-pemilih',UserController::class);
+// Route::delete('/konfirmasi-pemilih', [ConfirmController::class, 'destroy'])->name('reject-user');
+
 // Route::get('/konfirmasi-pemilih', [UserController::class ,'index'] )->name('konfirmasi-pemilih');
 // Route::post('/konfirmasi-pemilih/{id}', [UseracceptController::class, 'move'])->name('move');
 
