@@ -8,27 +8,27 @@
       <li>
         <div
           role="progressbar"
-          aria-valuenow="67"
+          aria-valuenow="{{ $presentasePemilih }}"
           aria-valuemin="0"
           aria-valuemax="100"
-          style="--value: 67"
+          style="--value: {{ $presentasePemilih }}"
         ></div>
         <span class="text">
           <p>Total Pemilih</p>
-          <h3>1020</h3>
+          <h3>{{ $TotalPemilih }}</h3>
         </span>
       </li>
       <li>
         <div
           role="progressbar"
-          aria-valuenow="67"
+          aria-valuenow="{{ $presentaseKandidat }}"
           aria-valuemin="0"
           aria-valuemax="100"
-          style="--value: 25"
+          style="--value: {{ $presentaseKandidat }}"
         ></div>
         <span class="text">
           <p>Total Kandidat</p>
-          <h3>2834</h3>
+          <h3>{{$JumlahKandidat }}</h3>
         </span>
       </li>
     </ul>
@@ -44,11 +44,13 @@
     </div>
   </main>
 </section>
+<script src="js/cms.js"></script>
+
 @endsection
 
 
 
-  <script src="../../js/cms.js"></script>
+
 
 
 

@@ -27,6 +27,6 @@ class UseracceptController extends Controller
             $user->delete();
         
         // Redirect kembali ke halaman konfirmasi
-        return redirect()->route('konfirmasi-pemilih');
+        return redirect()->route('konfirmasi-pemilih.index');
     }
 }

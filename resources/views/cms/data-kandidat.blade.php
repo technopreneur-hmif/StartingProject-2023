@@ -12,7 +12,7 @@
                 </div>
                 <!-- Check settings for dependencies! -->
                 <div class="container">
-                    <form  method="POST" action="{{ Route('tambah-data-kandidat') }}">
+                    <form  method="POST" action="{{ Route('data-kandidat.store') }}">
                         @csrf
                         <label for="name">Nama Kandidat</label>
                         <input type="text" id="name" name="nama_kandidat" placeholder="Masukkan Nama" required>
@@ -39,6 +39,7 @@
         </div>
 </section>
 <script src="js/cms.js"></script>
+
 @endsection
 
 

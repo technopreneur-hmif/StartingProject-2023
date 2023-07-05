@@ -12,13 +12,17 @@
                         </div>
                         <!-- Check settings for dependencies! -->
                         <div class="container">
-                            <form method="POST" action="{{ Route('tambah-user') }}">
+                            <form method="POST" action="{{ Route('data-user.store') }}">
                                 @csrf
+                                @error('email')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                                @enderror
+
                                 <label for="name">Nama User</label>
                                 <input type="text" id="name" name="nama_user" placeholder="Masukkan Nama" required>
 
                                 <label for="email">Email</label>
-                                <input type="text" id="email" name="email" placeholder="Masukkan email" required>
+                                <input type="text" id="email" name="email" placeholder="Masukkan email" value="{{ old('email') }}"  required>
 
                                 <label for="username">Username</label>
                                 <input type="text" id="username" name="username" placeholder="Masukkan Username" required>
@@ -28,8 +32,8 @@
 
                                 <label for="role">Role</label>
                                 <select id="role" name="role" required>
-                                    <option value="admin">Admin</option>
                                     <option value="pemilih">Pemilih</option>
+                                    <option value="admin">Admin</option>
                                 </select>
 
                                 <button class="btn-tambah-kandidat" type="submit" value="Tambah Akun User" >Tambah</button>
@@ -39,6 +43,7 @@
                 </div>
         </section>
         <script src="js/cms.js"></script>
+
 @endsection
 
 

@@ -13,13 +13,14 @@
                 <div class="containers">
                     <div class="card-confirm">
                         {{-- <p>{{ $loop->iteration }}</p> --}}
-
+                        <div class="user-details">
                             <label>Detail</label>
-                                <p>{{ $user->nama_user }}</p>
-                                <p>{{ $user->email }}</p>
-                                <p>{{ $user->username }}</p>
-                                <p>{{ $user->role }}</p>
-                        
+                            <p><span>Nama</span>: {{ $user->nama_user }}</p>
+                            <p><span>Email</span>: {{ $user->email }}</p>
+                            <p><span>Username</span>: {{ $user->username }}</p>
+                            <p><span>Role</span>: {{ $user->role }}</p>
+                        </div>
+
                                 <div class="btn">
                                     <form action="{{ Route('move',$user->id)}}" method="POST">
                                         @csrf
@@ -34,14 +35,14 @@
                                         </form>
                                 </div>
                         </form>
-
+ 
      
                     </div>
                 </div>
             </div>
         </div>
 </section>
-<script src="../../js/cms.js"></script>
+<script src="js/cms.js"></script>
 @endsection
 
 

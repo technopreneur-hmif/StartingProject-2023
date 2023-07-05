@@ -10,11 +10,12 @@ use Illuminate\Http\Request;
 
 class KandidatController extends Controller
 {
-    public function create()
+    public function index()
     {
-        return view('cms.data-kandidat',[
-            'title' => 'data-kandidat'
-        ]);
+
+        $title = 'data-kandidat';
+        return view('cms.data-kandidat', compact('title')
+        );
     }
 
     public function store(Request $request)

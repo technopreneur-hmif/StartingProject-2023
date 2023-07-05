@@ -45,7 +45,7 @@ class ConfirmController extends Controller
         $data->delete();
 
         $users=User::all();
-        return redirect()->route('konfirmasi-pemilih');
+        return redirect()->route('konfirmasi-pemilih.index');
     }
 
 }

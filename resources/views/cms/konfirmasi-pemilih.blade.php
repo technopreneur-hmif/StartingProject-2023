@@ -54,6 +54,7 @@
         </div>
     </div>
 </section>
-<script src="../../js/cms.js"></script>
+<script src="js/cms.js"></script>
+
 @endsection
 
