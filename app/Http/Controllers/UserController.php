@@ -22,7 +22,7 @@ class UserController extends Controller
         // Mengubah jumlah maksimum kandidat menjadi 4
         $maxKandidat = 4;
         // Mengubah jumlah maksimum pemilih menjadi 2.500
-        $maxPemilih = 300;
+        $maxPemilih = 100;
 
         // Menghitung presentase total pemilih
         $presentasePemilih = ($TotalPemilih > 0) ? ($TotalPemilih / $maxPemilih) * 100 : 0;
@@ -76,7 +76,6 @@ class UserController extends Controller
         ]);
         return view('cms.data-user', ['title' => 'data-user'])->with('success', 'User berhasil ditambahkan!');
     }
-
 }
 
 
