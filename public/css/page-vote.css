@@ -135,6 +135,7 @@ nav .icon-burger .line {
   justify-content: center;
 }
 
+
 .foto-kandidat {
   width: 248px;
   height: 268px;
@@ -452,7 +453,6 @@ footer {
 
   #btn-vote {
     padding: 4px 24px;
-    margin: 1rem;
     border-radius: 8px;
   }
 
@@ -472,4 +472,5 @@ footer {
   .footer-nav {
     display: none;
   }
+  
 }

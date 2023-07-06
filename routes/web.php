@@ -5,13 +5,7 @@ use App\Http\Controllers\KandidatController;
 use App\Http\Controllers\UseracceptController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-
-// Route::get('/', function () {
-//     return view('cms.cms');
-// });
-
-// Route::get('/Vote', [UserController::class ,'ShowDashboard'] )->name('cmsdashboard');
-
+use App\Http\Controllers\UserViewController;
 
 Route::get('/Dashboard', [UserController::class ,'ShowDashboard'] )->name('cmsdashboard');
 
@@ -21,11 +15,7 @@ Route::delete('/confirm/{id}', [ConfirmController::class, 'destroy'])->name('rej
 Route::post('/confirm/{id}', [ConfirmController::class, 'move'])->name('move');
 
 Route::resource('konfirmasi-pemilih',UserController::class);
-// Route::delete('/konfirmasi-pemilih', [ConfirmController::class, 'destroy'])->name('reject-user');
-
-// Route::get('/konfirmasi-pemilih', [UserController::class ,'index'] )->name('konfirmasi-pemilih');
-// Route::post('/konfirmasi-pemilih/{id}', [UseracceptController::class, 'move'])->name('move');
-
+Route::delete('konfirmasi-pemilih/{id}', [UserController::class ,'destroy'] )->name('rejectuser');
 
 Route::resource('data-kandidat',KandidatController::class);
 // Route::get('/data-kandidat', [KandidatController::class ,'create'] )->name('data-kandidat');
@@ -41,6 +31,10 @@ Route::resource('data-user',UserController::class);
 // Route::post('/data-user', [UserController::class ,'store'])->name('tambah-user');
 
 
+// Route::get('/page-vote', function () {
+//     return view('user.page-vote');
+// }); 
 
+Route::resource('page-vote',UserViewController::class);
 
 

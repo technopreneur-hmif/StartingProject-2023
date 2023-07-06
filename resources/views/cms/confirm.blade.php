@@ -41,6 +41,7 @@
                 </div>
             </div>
         </div>
+    </div>
 </section>
 <script src="js/cms.js"></script>
 @endsection

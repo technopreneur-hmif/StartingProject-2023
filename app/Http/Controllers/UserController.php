@@ -80,7 +80,7 @@ class UserController extends Controller
     {
         $data = User::where('id', $id)->first();
         $data->delete();
-        Session::flash('success', 'Data Arsip Berhasil Dihapus');
+        // Session::flash('success', 'Data Arsip Berhasil Dihapus');
         $users=User::all();
         return redirect()->route('konfirmasi-pemilih.index',compact('users'));
     }

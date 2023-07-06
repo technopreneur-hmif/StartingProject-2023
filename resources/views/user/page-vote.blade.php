@@ -14,7 +14,7 @@
         <input id="nav-toggle" type="checkbox" />
         <img
           class="logo"
-          src="../assets/images/logo-web.svg"
+          src="images/logo-web.svg"
           height="60"
           alt="logo-web"
         />
@@ -40,25 +40,17 @@
           </div>
           <div class="kandidat">
             <div class="kandidat-list">
+              @foreach($kandidats as $kandidat)
               <div class="kandidat-card">
-                <div class="foto-kandidat">
-                  <button id="btn-vote">Vote</button>
-                </div>
+                <img class="foto-kandidat" src="{{ $kandidat->link_foto_kandidat }}" alt="foto-kandidat">
+                <button style="position: absolute; bottom:0; margin-bottom: 140px" id="btn-vote">Vote</button>
               </div>
-              <div class="kandidat-card">
-                <div class="foto-kandidat">
-                  <button id="btn-vote">Vote</button>
-                </div>
-              </div>
-              <div class="kandidat-card">
-                <div class="foto-kandidat">
-                  <button id="btn-vote">Vote</button>
-                </div>
-              </div>
+              @endforeach
             </div>
           </div>
         </div>
       </section>
+      
 
       <div class="popup">
         <div class="content">
@@ -86,7 +78,7 @@
 
       <footer>
         <div class="footer-nav">
-          <img src="../assets/images/logo-web.svg" height="60" alt="logo-web" />
+          <img src="/images/logo-web.svg" height="60" alt="logo-web" />
           <div class="foot-menu">
             <a href="#" class="nav-item nav-link mx-2">Beranda</a>
             <a href="#" class="nav-item nav-link mx-2">Calon Kandidat</a>
@@ -102,5 +94,5 @@
     </div>
   </body>
 
-  <script src="../js/konfirmasi-vote.js"></script>
+  <script src="js/konfirmasi-vote.js"></script>
 </html>
