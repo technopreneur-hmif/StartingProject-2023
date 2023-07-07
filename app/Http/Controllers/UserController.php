@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Kandidat;
+use App\Models\VoteData;
 use App\Models\useraccept;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
@@ -19,25 +20,20 @@ class UserController extends Controller
         $TotalPemilih = useraccept::where('role' , 'pemilih')->count();;
         $JumlahKandidat = Kandidat::count();
 
-        // Mengubah jumlah maksimum kandidat menjadi 4
         $maxKandidat = 4;
-        // Mengubah jumlah maksimum pemilih menjadi 2.500
         $maxPemilih = 100;
 
-        // Menghitung presentase total pemilih
         $presentasePemilih = ($TotalPemilih > 0) ? ($TotalPemilih / $maxPemilih) * 100 : 0;
-        // Menghitung presentase total kandidat
         $presentaseKandidat = ($JumlahKandidat > 0) ? ($JumlahKandidat / $maxKandidat) * 100 : 0;
 
         return view('cms.dashboard' ,compact('title','TotalPemilih','JumlahKandidat','presentasePemilih','presentaseKandidat'));
     }
 
     public function index()
-    {
-        $users = User::all();
-        return view('cms.konfirmasi-pemilih', compact('users') ,[
-            'title' => 'konfirmasi-pemilih'
-        ]);
+    {   
+        $title = 'konfirmasi-pemilih';
+        $VoteDatas = VoteData::all();
+        return view('cms.konfirmasi-pemilih', compact('VoteDatas','title'));
     }
     public function create()
     {   
@@ -45,19 +41,9 @@ class UserController extends Controller
             'title' => 'data-user'
         ]);
     }
-    //data store
     public function store(Request $request)
     {       
-        
-    //     $validatedData = $request->validate(
-    
-    //     'email' => [
-    //         'required',
-    //         Rule::unique('users')->where(function ($query) use ($request) {
-    //             return $query->where('email', $request->email);
-    //         }),
-    //     ];
-    // );
+
         $validatedData = $request->validate([
             'email' => [
                 'required',
@@ -65,7 +51,6 @@ class UserController extends Controller
                 Rule::unique('users', 'email'),
             ],
         ]);
- 
 
         User::create([
             'nama_user' => $request->nama_user,

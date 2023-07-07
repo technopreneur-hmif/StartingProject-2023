@@ -10,7 +10,7 @@
                     <h3 class="card-title">Konfirmasi Pemilih</h3>
                 </div>
 
-                @foreach ($users as $user)
+                @foreach ($VoteDatas as $VoteData)
                 <div class="containers">
                     <div class="pemilih">
                         <div class="username">
@@ -19,15 +19,14 @@
                                 <path fill="currentColor"
                                     d="M12 4a4 4 0 0 1 4 4a4 4 0 0 1-4 4a4 4 0 0 1-4-4a4 4 0 0 1 4-4m0 10c4.42 0 8 1.79 8 4v2H4v-2c0-2.21 3.58-4 8-4Z" />
                             </svg>
-                            @csrf
                         </div>
 
                         <p>pemilih  {{ $loop->iteration }} </p>
                         <p></p>
-                        <p>{{ $user->nama_user }}</p>
+                        <p>{{ $VoteData->nama_user }}</p>
     
                         <div class="btn">
-                                <form action="{{Route('rejectuser', $user->id)}}" method="POST">
+                                <form action="{{Route('rejectuser', $VoteData->id)}}" method="POST">
                                     @method('DELETE')
                                     @csrf
                                     <a class="btn-reject" role="button">
@@ -41,7 +40,7 @@
                                     </a>
                                 </form>
 
-                                <a class="btn-accept" href="{{ Route('confirm-page' ,$user->id)}}" ><svg xmlns="http://www.w3.org/2000/svg" width="35"
+                                <a class="btn-accept" href="{{ Route('confirm-page' ,$VoteData->id)}}" ><svg xmlns="http://www.w3.org/2000/svg" width="35"
                                     height="35" viewBox="0 0 48 48">
                                     <mask id="ipSCheckOne0">
                                         <g fill="none" stroke-linejoin="round" stroke-width="4">

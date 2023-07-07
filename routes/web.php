@@ -13,7 +13,6 @@ Route::get('/confirm', [ConfirmController::class ,'index'] )->name('confirm');
 Route::get('/confirm/{id}', [ConfirmController::class, 'show'])->name('confirm-page');
 Route::delete('/confirm/{id}', [ConfirmController::class, 'destroy'])->name('reject');
 Route::post('/confirm/{id}', [ConfirmController::class, 'move'])->name('move');
-
 Route::resource('konfirmasi-pemilih',UserController::class);
 Route::delete('konfirmasi-pemilih/{id}', [UserController::class ,'destroy'] )->name('rejectuser');
 
@@ -36,5 +35,8 @@ Route::resource('data-user',UserController::class);
 // }); 
 
 Route::resource('page-vote',UserViewController::class);
+Route::post('page-vote/{id}', [UserViewController::class ,'vote'] )->name('vote');
+
+
 
 

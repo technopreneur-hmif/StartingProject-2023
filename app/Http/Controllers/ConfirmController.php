@@ -7,22 +7,18 @@ use App\Models\useraccept;
 use Illuminate\Routing\Controller;
 use App\Http\Requests\StoreConfirmRequest;
 use App\Http\Requests\UpdateConfirmRequest;
+use App\Models\VoteData;
 
 class ConfirmController extends Controller
 {
     public function index()
     {
+        $title = 'konfirmasi-pemilih';
         $users = User::all();
-        return view('cms.confirm', compact('users') ,[
-            'title' => 'konfirmasi-pemilih'
-        ]);
+        $VoteDatas = VoteData::all();
+        return view('cms.confirm', compact('users','VoteDatas','title'));
     }
 
-    // public function show($id)
-    // {
-    //     $user = User::where('id', $id)->first();
-    //     return view('cms.confirm', compact('user'));
-    // }
 
     public function show($id)
 {
@@ -39,8 +35,9 @@ class ConfirmController extends Controller
         $data = User::where('id', $id)->first();
         $data->delete();
 
+        $VoteDatas = VoteData::all();
         $users=User::all();
-        return redirect()->route('konfirmasi-pemilih.index',compact('users'));
+        return redirect()->route('konfirmasi-pemilih.index',compact('users','VoteDatas'));
     }
 
     public function move($id)

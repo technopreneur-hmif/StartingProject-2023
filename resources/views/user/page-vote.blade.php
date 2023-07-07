@@ -43,7 +43,8 @@
               @foreach($kandidats as $kandidat)
               <div class="kandidat-card">
                 <img class="foto-kandidat" src="{{ $kandidat->link_foto_kandidat }}" alt="foto-kandidat">
-                <button style="position: absolute; bottom:0; margin-bottom: 140px" id="btn-vote">Vote</button>
+                <button style="position: absolute; bottom:0; margin-bottom: 140px" id="btn-vote" 
+                  class="vote-button" data-popup-target="{{ $kandidat->id }}">Vote</button>
               </div>
               @endforeach
             </div>
@@ -51,18 +52,26 @@
         </div>
       </section>
       
-
       <div class="popup">
+        <form action="{{ route('vote',$user->id) }}" method="POST">
+          @csrf
         <div class="content">
           <p>Apakah anda sudah memilih sesuai dengan keinginan anda?</p>
           <div class="field">
-            <button class="close">Kembali</button>
-            <button class="btn-all">Ya, Saya Yakin</button>
+              <input type="hidden" name="id" value="{{ $user->id }}">
+              <input type="hidden" name="nama_user" value="{{ $user->nama_user }}">
+              <input type="hidden" name="email" value="{{ $user->email }}">
+              <input type="hidden" name="role" value="{{ $user->role }}">
+              <input type="hidden" name="kandidat_id" id="kandidatId" value="">
+            <button type="button" class="close">Kembali</button>
+            <button  type="submit" class="btn-all" > Ya, Saya Yakin</button>
           </div>
         </div>
+      </form>
       </div>
 
-      <section>
+
+      {{-- <section>
         <div id="cara-voting">
           <div class="embed-responsive embed-responsive-16by9">
             <iframe
@@ -74,7 +83,7 @@
             ></iframe>
           </div>
         </div>
-      </section>
+      </section> --}}
 
       <footer>
         <div class="footer-nav">
@@ -94,5 +103,6 @@
     </div>
   </body>
 
-  <script src="js/konfirmasi-vote.js"></script>
+  {{-- <script src="js/konfirmasi-vote.js"></script> --}}
+  <script src="js/confirm.js"></script>
 </html>
