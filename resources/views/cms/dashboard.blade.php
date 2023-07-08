@@ -35,7 +35,11 @@
 
     
     <div class="chart">
-      <div class="card-for-piechart" style="background-color: white; padding: 10px;">
+      <div class="card-for-piechart" style="background-color: white; padding: 10px;   position: relative;
+      width: 30%;
+      margin: 0;
+      border-radius: 12px;
+      padding: 10px;">
         <h2>Hasil Voting</h2>
         <canvas id="pieChart"></canvas>
       </div>
