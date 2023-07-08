@@ -14,30 +14,28 @@ class ConfirmController extends Controller
     public function index()
     {
         $title = 'konfirmasi-pemilih';
-        $users = User::all();
+        // $users = User::all();
         $VoteDatas = VoteData::all();
         return view('cms.confirm', compact('users','VoteDatas','title'));
     }
 
-
     public function show($id)
 {
-    $user = User::find($id);
-    if (!$user) {
+    $VoteData = VoteData::find($id);
+    if (!$VoteData) {
         abort(404); // Menampilkan 404 jika pengguna tidak ditemukan
     }
-    return view('cms.confirm', compact('user'),[
+    return view('cms.confirm', compact('VoteData'),[
         'title' => 'konfirmasi-pemilih'
     ]);
 }
     public function destroy($id)
     {
-        $data = User::where('id', $id)->first();
+        $data = VoteData::where('id', $id)->first();
         $data->delete();
 
         $VoteDatas = VoteData::all();
-        $users=User::all();
-        return redirect()->route('konfirmasi-pemilih.index',compact('users','VoteDatas'));
+        return redirect()->route('konfirmasi-pemilih.index',compact('VoteDatas'));
     }
 
     public function move($id)
@@ -52,7 +50,6 @@ class ConfirmController extends Controller
                 'role' => $user->role
             ]);
         
-            $user->delete();
         
         // Redirect kembali ke halaman konfirmasi
         return redirect()->route('konfirmasi-pemilih.index');

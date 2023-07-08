@@ -2,6 +2,9 @@
 
 @section('container')
 <link rel="stylesheet" href="/css/confirm.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+
 <section id="content-wrapper">
     <div class="row">
         <div class="column">
@@ -9,36 +12,28 @@
                 <div class="card-header">
                     <h3 class="card-title">Konfirmasi</h3>
                 </div>
-                <!-- Check settings for dependencies! -->
-                <div class="containers">
-                    <div class="card-confirm">
-                        {{-- <p>{{ $loop->iteration }}</p> --}}
-                        <div class="user-details">
-                            <label>Detail</label>
-                            <p><span>Nama</span>: {{ $user->nama_user }}</p>
-                            <p><span>Email</span>: {{ $user->email }}</p>
-                            <p><span>Username</span>: {{ $user->username }}</p>
-                            <p><span>Role</span>: {{ $user->role }}</p>
-                        </div>
-
+                    <div class="container">
+                        <div class="card-confirm">
+                            <h2>Detail</h2>
+                            <p>Pemilih :{{ $VoteData->id }}</p>
+                            <p>Nama: {{ $VoteData->nama_user }}</p>
+                            <p>Email: {{ $VoteData->email }}</p>
+                            <p>Username: {{ $VoteData->username }}</p>
+                            <p>Role: {{ $VoteData->role }}</p>
                                 <div class="btn">
-                                    <form action="{{ Route('move',$user->id)}}" method="POST">
+                                    <form action="{{ Route('move',$VoteData->id)}}" method="POST">
                                         @csrf
-                                        <a id="btn-confirm"><button id="btn-reject">Konfirmasi</button> </a>
+                                        <a id="btn-confirm"><button id="btn-confirm">Konfirmasi</button> </a>
                                     </form>
 
-
-                                    <form action="{{Route('reject', $user->id)}}" method="POST">
+                                    <form action="{{Route('reject', $VoteData->id)}}" method="POST">
                                             @method('DELETE')
                                             @csrf
-                                            <button id="btn-reject">Tolak </button>
-                                        </form>
+                                            <a id="btn-reject"><button  id="btn-reject">Tolak </button></a>
+                                    </form>
                                 </div>
-                        </form>
- 
-     
+                        </div>
                     </div>
-                </div>
             </div>
         </div>
     </div>

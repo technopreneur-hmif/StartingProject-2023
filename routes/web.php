@@ -29,11 +29,6 @@ Route::resource('data-user',UserController::class);
 // Route::get('/data-user', [UserController::class ,'create'] )->name('data-user');
 // Route::post('/data-user', [UserController::class ,'store'])->name('tambah-user');
 
-
-// Route::get('/page-vote', function () {
-//     return view('user.page-vote');
-// }); 
-
 Route::resource('page-vote',UserViewController::class);
 Route::post('page-vote/{id}', [UserViewController::class ,'vote'] )->name('vote');
 

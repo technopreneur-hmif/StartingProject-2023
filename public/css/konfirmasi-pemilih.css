@@ -135,38 +135,54 @@ a:focus {
   margin-right: -250px;
 }
 
-#customers {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-#customers td,
-#customers th {
-  border: 1px solid #ddd;
-  padding: 8px;
-}
-
-#customers tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-#customers tr:hover {
-  background-color: #ddd;
-}
-
-#customers th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #2f80ed;
-  color: white;
-}
-
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;
   padding: 0 20px;
+}
+
+.pemilih {
+  display: flex;
+  background-color: #fff;
+  color: #1f1f29;
+  border: 2px;
+  border-style: solid;
+  border-color: #b8b8b8;
+  border-radius: 12px;
+  padding: 4px 20px;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.pemilih .username {
+  display: flex;
+  align-items: center;
+}
+
+.pemilih .user-icon {
+  padding: 8px;
+  background-color: #fff;
+  border-radius: 100%;
+  margin-right: 20px;
+}
+
+.pemilih p {
+  font-size: 16px;
+}
+
+.pemilih .btn-reject {
+  color: #ff0000;
+  margin-right: 12px;
+}
+
+.pemilih .btn-accept {
+  color: #2400ff;
+}
+
+.pemilih .btn {
+  display: flex;
+  align-items: center;
 }
 
 footer {

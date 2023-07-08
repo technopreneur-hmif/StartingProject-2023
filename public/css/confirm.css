@@ -1,315 +1,313 @@
 body {
-    padding-bottom: 30px;
-    position: relative;
-    min-height: 100%;
-    margin: 0;
-    overflow-x: hidden;
-    background: #f1f1f1;
-    padding: 0;
-  }
-  
-  * {
-    font-family: "Poppins", sans-serif;
-  }
-  
-  a {
-    transition: background 0.2s, color 0.2s;
-  }
-  a:hover,
-  a:focus {
-    text-decoration: none;
-  }
-  
+  padding-bottom: 30px;
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  background: #f1f1f1;
+  padding: 0;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  transition: background 0.2s, color 0.2s;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
+}
+
+#wrapper {
+  padding-left: 0;
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #fff;
+  transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+.sidebar-brand {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  text-align: center;
+  padding: 20px 0;
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+.sidebar-brand h2 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 20px;
+  color: #2a2a2a;
+}
+
+.sidebar-nav {
+  position: absolute;
+  top: 75px;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sidebar-nav > li {
+  text-indent: 10px;
+  line-height: 60px;
+}
+.sidebar-nav > li a {
+  display: block;
+  text-decoration: none;
+  color: #2a2a2a;
+  font-weight: 500;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  margin: 0 12px;
+  border-radius: 8px;
+}
+.sidebar-nav > li > a:hover,
+.sidebar-nav > li.active > a {
+  text-decoration: none;
+  color: #2f80ed;
+  background: #e3efff;
+  margin: 0 12px;
+  border-radius: 8px;
+}
+.sidebar-nav > li > a svg {
+  font-size: 24px;
+  width: 60px;
+}
+
+#navbar-wrapper {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+}
+#wrapper.toggled #navbar-wrapper {
+  position: absolute;
+  margin-right: -250px;
+}
+#navbar-wrapper .navbar {
+  background: #fff;
+  font-size: 24px;
+  margin-bottom: 0;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+#navbar-wrapper .navbar a {
+  color: #2a2a2a;
+  margin-left: 8px;
+}
+#navbar-wrapper .navbar a:hover {
+  color: #f8be12;
+}
+
+#content-wrapper {
+  width: 100%;
+  position: absolute;
+  top: 100px;
+}
+#content-wrapper .card-header {
+  padding: 0 20px;
+}
+#wrapper.toggled #content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 0 20px;
+}
+
+.card-confirm {
+  background-color: #fff;
+  border: 2px;
+  border-style: solid;
+  border-color: #b8b8b8;
+  border-radius: 12px;
+  padding: 0 20px 20px 20px;
+}
+
+.btn {
+  margin-top: 80px;
+}
+
+.btn #btn-confirm {
+  border: 0;
+  padding: 4px 12px;
+  background-color: #2400ff;
+  color: white;
+  font-size: 12px;
+  border-radius: 4px;
+  margin-right: 20px;
+  text-decoration: none;
+}
+
+.btn #btn-reject {
+  border: 0;
+  background: transparent;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+footer {
+  bottom: 0;
+  background: #fff;
+  padding: 12px 0;
+  margin-top: 20px;
+}
+
+footer p {
+  font-size: 12px;
+}
+
+@media (min-width: 992px) {
   #wrapper {
-    padding-left: 0;
-    transition: all 0.5s ease;
-    position: relative;
+    padding-left: 250px;
   }
-  
+
+  #wrapper.toggled {
+    padding-left: 60px;
+  }
+
   #sidebar-wrapper {
-    z-index: 1000;
-    position: fixed;
-    left: 250px;
-    width: 0;
-    height: 100%;
-    margin-left: -250px;
-    overflow-y: auto;
-    overflow-x: hidden;
-    background: #fff;
-    transition: all 0.5s ease;
+    width: 250px;
   }
-  
+
   #wrapper.toggled #sidebar-wrapper {
-    width: 250px;
-  }
-  
-  .sidebar-brand {
-    position: absolute;
-    top: 0;
-    width: 250px;
-    text-align: center;
-    padding: 20px 0;
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-  }
-  .sidebar-brand h2 {
-    margin: 0;
-    font-weight: 500;
-    font-size: 20px;
-    color: #2a2a2a;
-  }
-  
-  .sidebar-nav {
-    position: absolute;
-    top: 75px;
-    width: 250px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-  .sidebar-nav > li {
-    text-indent: 10px;
-    line-height: 60px;
-  }
-  .sidebar-nav > li a {
-    display: block;
-    text-decoration: none;
-    color: #2a2a2a;
-    font-weight: 500;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    margin: 0 12px;
-    border-radius: 8px;
-  }
-  .sidebar-nav > li > a:hover,
-  .sidebar-nav > li.active > a {
-    text-decoration: none;
-    color: #2f80ed;
-    background: #e3efff;
-    margin: 0 12px;
-    border-radius: 8px;
-  }
-  .sidebar-nav > li > a svg {
-    font-size: 24px;
     width: 60px;
   }
-  
-  #navbar-wrapper {
-    width: 100%;
+
+  #wrapper.toggled #navbar-wrapper {
     position: absolute;
-    z-index: 2;
+    margin-right: -190px;
+  }
+
+  #wrapper.toggled #content-wrapper {
+    position: absolute;
+    margin-right: -190px;
+  }
+
+  #navbar-wrapper {
+    position: relative;
+  }
+
+  #wrapper.toggled {
+    padding-left: 60px;
+  }
+
+  #content-wrapper {
+    position: relative;
+    top: 0;
+  }
+
+  #wrapper.toggled #navbar-wrapper,
+  #wrapper.toggled #content-wrapper {
+    position: relative;
+    margin-right: 60px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #wrapper {
+    padding-left: 60px;
+  }
+
+  #sidebar-wrapper {
+    width: 60px;
+  }
+
+  #wrapper.toggled #navbar-wrapper {
+    position: absolute;
+    margin-right: -250px;
+  }
+
+  #wrapper.toggled #content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+  }
+
+  #navbar-wrapper {
+    position: relative;
+  }
+
+  #wrapper.toggled {
+    padding-left: 250px;
+  }
+
+  #content-wrapper {
+    position: relative;
+    top: 0;
+  }
+
+  #wrapper.toggled #navbar-wrapper,
+  #wrapper.toggled #content-wrapper {
+    position: relative;
+    margin-right: 250px;
+  }
+}
+
+@media (max-width: 767px) {
+  #wrapper {
+    padding-left: 0;
+  }
+
+  #sidebar-wrapper {
+    width: 0;
+  }
+
+  #wrapper.toggled #sidebar-wrapper {
+    width: 250px;
   }
   #wrapper.toggled #navbar-wrapper {
     position: absolute;
     margin-right: -250px;
   }
-  #navbar-wrapper .navbar {
-    background: #fff;
-    font-size: 24px;
-    margin-bottom: 0;
-    border-radius: 0;
-    display: flex;
-    align-items: center;
-    padding: 10px;
-  }
-  #navbar-wrapper .navbar a {
-    color: #2a2a2a;
-    margin-left: 8px;
-  }
-  #navbar-wrapper .navbar a:hover {
-    color: #f8be12;
-  }
-  
-  #content-wrapper {
-    width: 100%;
-    position: absolute;
-    top: 100px;
-  }
-  #content-wrapper .card-header {
-    padding: 0 20px;
-  }
+
   #wrapper.toggled #content-wrapper {
     position: absolute;
     margin-right: -250px;
   }
-  
-  .containers {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 0 20px;
+
+  #navbar-wrapper {
+    position: relative;
   }
-  
-  .card-confirm {
-    background-color: #fff;
-    border: 2px;
-    border-style: solid;
-    border-color: #b8b8b8;
-    border-radius: 12px;
-    padding: 0 20px 20px 20px;
+
+  #wrapper.toggled {
+    padding-left: 250px;
   }
-  
-  .btn {
-    margin-top: 80px;
+
+  #content-wrapper {
+    position: relative;
+    top: 0;
   }
-  
-  .btn #btn-confirm {
-    border: 0;
-    padding: 4px 12px;
-    background-color: #2400ff;
-    color: white;
-    font-size: 12px;
-    border-radius: 4px;
-    margin-right: 20px;
-    text-decoration: none;
+
+  #wrapper.toggled #navbar-wrapper,
+  #wrapper.toggled #content-wrapper {
+    position: relative;
+    margin-right: 250px;
   }
-  
-  .btn #btn-reject {
-    border: 0;
-    background: transparent;
-    font-size: 12px;
-    font-weight: 600;
-    text-decoration: none;
-  }
-  
-  footer {
-    bottom: 0;
-    background: #fff;
-    padding: 12px 0;
-    margin-top: 20px;
-  }
-  
-  footer p {
-    font-size: 12px;
-  }
-  
-  @media (min-width: 992px) {
-    #wrapper {
-      padding-left: 250px;
-    }
-  
-    #wrapper.toggled {
-      padding-left: 60px;
-    }
-  
-    #sidebar-wrapper {
-      width: 250px;
-    }
-  
-    #wrapper.toggled #sidebar-wrapper {
-      width: 60px;
-    }
-  
-    #wrapper.toggled #navbar-wrapper {
-      position: absolute;
-      margin-right: -190px;
-    }
-  
-    #wrapper.toggled #content-wrapper {
-      position: absolute;
-      margin-right: -190px;
-    }
-  
-    #navbar-wrapper {
-      position: relative;
-    }
-  
-    #wrapper.toggled {
-      padding-left: 60px;
-    }
-  
-    #content-wrapper {
-      position: relative;
-      top: 0;
-    }
-  
-    #wrapper.toggled #navbar-wrapper,
-    #wrapper.toggled #content-wrapper {
-      position: relative;
-      margin-right: 60px;
-    }
-  }
-  
-  @media (min-width: 768px) and (max-width: 991px) {
-    #wrapper {
-      padding-left: 60px;
-    }
-  
-    #sidebar-wrapper {
-      width: 60px;
-    }
-  
-    #wrapper.toggled #navbar-wrapper {
-      position: absolute;
-      margin-right: -250px;
-    }
-  
-    #wrapper.toggled #content-wrapper {
-      position: absolute;
-      margin-right: -250px;
-    }
-  
-    #navbar-wrapper {
-      position: relative;
-    }
-  
-    #wrapper.toggled {
-      padding-left: 250px;
-    }
-  
-    #content-wrapper {
-      position: relative;
-      top: 0;
-    }
-  
-    #wrapper.toggled #navbar-wrapper,
-    #wrapper.toggled #content-wrapper {
-      position: relative;
-      margin-right: 250px;
-    }
-  }
-  
-  @media (max-width: 767px) {
-    #wrapper {
-      padding-left: 0;
-    }
-  
-    #sidebar-wrapper {
-      width: 0;
-    }
-  
-    #wrapper.toggled #sidebar-wrapper {
-      width: 250px;
-    }
-    #wrapper.toggled #navbar-wrapper {
-      position: absolute;
-      margin-right: -250px;
-    }
-  
-    #wrapper.toggled #content-wrapper {
-      position: absolute;
-      margin-right: -250px;
-    }
-  
-    #navbar-wrapper {
-      position: relative;
-    }
-  
-    #wrapper.toggled {
-      padding-left: 250px;
-    }
-  
-    #content-wrapper {
-      position: relative;
-      top: 0;
-    }
-  
-    #wrapper.toggled #navbar-wrapper,
-    #wrapper.toggled #content-wrapper {
-      position: relative;
-      margin-right: 250px;
-    }
-  }
-  
- 
+}

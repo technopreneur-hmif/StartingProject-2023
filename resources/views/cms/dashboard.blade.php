@@ -2,6 +2,7 @@
 
 
 @section('container')
+<link rel="stylesheet" href='css/cms.css' />
 <section id="content-wrapper">
   <main>
     <ul class="box-info">

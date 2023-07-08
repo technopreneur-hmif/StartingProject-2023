@@ -63,11 +63,11 @@ class UserController extends Controller
     }
     public function destroy($id)
     {
-        $data = User::where('id', $id)->first();
+        $data = VoteData::where('id', $id)->first();
         $data->delete();
         // Session::flash('success', 'Data Arsip Berhasil Dihapus');
-        $users=User::all();
-        return redirect()->route('konfirmasi-pemilih.index',compact('users'));
+        $VoteDatas=VoteData::all();
+        return redirect()->route('konfirmasi-pemilih.index',compact('VoteDatas'));
     }
 }
 

@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('container')
-<link rel="stylesheet" href="css/testconfirm.css">
+<link rel="stylesheet" href="/css/konfirmasi-pemilih.css">
 <section id="content-wrapper">
     <div class="row">
         <div class="column">
@@ -21,7 +21,7 @@
                             </svg>
                         </div>
 
-                        <p>pemilih  {{ $loop->iteration }} </p>
+                        <p>pemilih {{ $VoteData->id }}</p>
                         <p></p>
                         <p>{{ $VoteData->nama_user }}</p>
     
@@ -40,7 +40,7 @@
                                     </a>
                                 </form>
 
-                                <a class="btn-accept" href="{{ Route('confirm-page' ,$VoteData->id)}}" ><svg xmlns="http://www.w3.org/2000/svg" width="35"
+                                <a class="btn-accept" href="{{ Route('confirm-page' ,$VoteData->id,)}}" ><svg xmlns="http://www.w3.org/2000/svg" width="35"
                                     height="35" viewBox="0 0 48 48">
                                     <mask id="ipSCheckOne0">
                                         <g fill="none" stroke-linejoin="round" stroke-width="4">

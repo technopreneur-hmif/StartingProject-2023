@@ -7,6 +7,7 @@
     <title>Page Voting</title>
 
     <link rel="stylesheet" href="/css/page-vote.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
   </head>
   <body>
     <div class="container">
@@ -38,6 +39,18 @@
           <div class="title">
             <h1>Vote</h1>
           </div>
+
+        @if (session('gagal'))
+          <div class="alert alert-danger">
+              {{ session('gagal') }}
+          </div>
+        @endif
+    
+        @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('success') }}
+        </div>
+        @endif
           <div class="kandidat">
             <div class="kandidat-list">
               @foreach($kandidats as $kandidat)
@@ -52,6 +65,8 @@
         </div>
       </section>
       
+
+
       <div class="popup">
         <form action="{{ route('vote',$user->id) }}" method="POST">
           @csrf
@@ -70,8 +85,7 @@
       </form>
       </div>
 
-
-      {{-- <section>
+      <section>
         <div id="cara-voting">
           <div class="embed-responsive embed-responsive-16by9">
             <iframe
@@ -83,7 +97,7 @@
             ></iframe>
           </div>
         </div>
-      </section> --}}
+      </section>
 
       <footer>
         <div class="footer-nav">
@@ -105,4 +119,5 @@
 
   {{-- <script src="js/konfirmasi-vote.js"></script> --}}
   <script src="js/confirm.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"></script>
 </html>
