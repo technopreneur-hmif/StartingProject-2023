@@ -76,6 +76,7 @@
               <input type="hidden" name="id" value="{{ $user->id }}">
               <input type="hidden" name="nama_user" value="{{ $user->nama_user }}">
               <input type="hidden" name="email" value="{{ $user->email }}">
+              <input type="hidden" name="username" value="{{ $user->username }}">
               <input type="hidden" name="role" value="{{ $user->role }}">
               <input type="hidden" name="kandidat_id" id="kandidatId" value="">
             <button type="button" class="close">Kembali</button>

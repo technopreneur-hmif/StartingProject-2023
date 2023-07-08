@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\Kandidat;
 use App\Models\VoteData;
 use App\Models\useraccept;
+use App\Models\VoteDataAccept;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
 use Illuminate\Routing\Controller;
@@ -15,22 +16,34 @@ use Illuminate\Support\Facades\Session;
 class UserController extends Controller
 {
     public function ShowDashboard(){
+        //Menampilkan Hasil vote
         $title = 'dashboardcms';
         
-        $TotalPemilih = useraccept::where('role' , 'pemilih')->count();;
+        $TotalPemilih = VoteDataAccept::where('role' , 'pemilih')->count();;
         $JumlahKandidat = Kandidat::count();
 
+        //pemilih
         $maxKandidat = 4;
-        $maxPemilih = 100;
+        $maxPemilih = 300;
 
+        //menghitung presentase
         $presentasePemilih = ($TotalPemilih > 0) ? ($TotalPemilih / $maxPemilih) * 100 : 0;
         $presentaseKandidat = ($JumlahKandidat > 0) ? ($JumlahKandidat / $maxKandidat) * 100 : 0;
-
-        return view('cms.dashboard' ,compact('title','TotalPemilih','JumlahKandidat','presentasePemilih','presentaseKandidat'));
+        
+        $HasilVoting = [];
+        $Warna = ['#red','#green','#orange','#blue'];
+        $kandidats = Kandidat::all();
+    
+        foreach ($kandidats as $kandidat) {
+            $jumlahSuara = VoteDataAccept::where('kandidat_id', $kandidat->id)->count();
+            $HasilVoting[$kandidat->id] = $jumlahSuara;
+        }
+        return view('cms.dashboard' ,compact('title','TotalPemilih','JumlahKandidat','presentasePemilih','presentaseKandidat','HasilVoting','Warna'));
     }
 
     public function index()
     {   
+        //Menampilkan view Konfirmasi-pemilih
         $title = 'konfirmasi-pemilih';
         $VoteDatas = VoteData::all();
         return view('cms.konfirmasi-pemilih', compact('VoteDatas','title'));

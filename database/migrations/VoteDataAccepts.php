@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('useraccepts', function (Blueprint $table) {
+        Schema::create('VoteDataAccepts', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('nama_user');
             $table->string('email')->unique();
-            $table->string('username');
-            $table->string('password');
             $table->string('role');
+            $table->string('username');
+            $table->string('kandidat_id');
             $table->string('created_at');
             $table->string('updated_at');
         });
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('useraccepts');
+        Schema::dropIfExists('VoteDataAccepts');
     }
 };

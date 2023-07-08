@@ -13,7 +13,7 @@ class UserViewController extends Controller
 {
     public function index(){
         $kandidats = Kandidat::all();
-        $user = User::where('id', 90)->first();
+        $user = User::where('id', 93)->first();
         return view('user.page-vote', compact(['kandidats','user']));
     }
     public function vote(Request $request ,$id){
@@ -30,6 +30,7 @@ class UserViewController extends Controller
             'id' => $request->id,
             'nama_user' => $request->nama_user,
             'email' => $request->email,
+            'username' =>$request->username,
             'role' => $request->role,
             'kandidat_id' => $request->kandidat_id
         ]);

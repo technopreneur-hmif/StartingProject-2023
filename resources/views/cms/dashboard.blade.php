@@ -2,7 +2,6 @@
 
 
 @section('container')
-<link rel="stylesheet" href='css/cms.css' />
 <section id="content-wrapper">
   <main>
     <ul class="box-info">
@@ -33,19 +32,64 @@
         </span>
       </li>
     </ul>
+
+    
     <div class="chart">
-      <figure class="pie-chart">
+      <div class="card-for-piechart" style="background-color: white; padding: 10px;">
         <h2>Hasil Voting</h2>
-        <figcaption>
-          1<span style="color: #4e79a7"></span><br />
-          2<span style="color: #f28e2c"></span><br />
-          3<span style="color: #e15759"></span>
-        </figcaption>
-      </figure>
+        <canvas id="pieChart"></canvas>
+      </div>
     </div>
   </main>
 </section>
-<script src="js/cms.js"></script>
+<script src="/js/cms.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chroma-js@2.1.0/chroma.min.js"></script>
+
+<script>
+  var ctx = document.getElementById('pieChart').getContext('2d');
+
+  var colors = [
+      '#2f80ed',
+      '#f28e2c',
+      '#e15759',
+      '#A2FF86'
+  ];
+
+  var pieChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+          labels: [
+              @foreach($HasilVoting as $kandidatId => $jumlahSuara)
+                  'Kandidat {{ $kandidatId }}',
+              @endforeach
+          ],
+          datasets: [{
+              data: [
+                  @foreach($HasilVoting as $kandidatId => $jumlahSuara)
+                      {{ $jumlahSuara }},
+                  @endforeach
+              ],
+              backgroundColor: colors.slice(0, @php count($HasilVoting) @endphp),
+          }],
+      },
+      options: {
+          cutoutPercentage: 50, // Persentase lubang di tengah (50% untuk setengah lingkaran)
+          plugins: {
+                    legend: {
+                        display: true,
+                        position: 'bottom', // Menampilkan label di bagian bawah
+                    },
+          },
+      }
+  });
+</script>
+
+
+
+
+
+
 
 @endsection
 

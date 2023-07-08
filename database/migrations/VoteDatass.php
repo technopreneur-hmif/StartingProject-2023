@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('nama_user');
             $table->string('email')->unique();
             $table->string('role');
+            $table->string('username');
             $table->string('kandidat_id');
             $table->string('created_at');
             $table->string('updated_at');

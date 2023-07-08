@@ -40,6 +40,7 @@
                                     </a>
                                 </form>
 
+                                @unless(session('moveRedirect'))
                                 <a class="btn-accept" href="{{ Route('confirm-page' ,$VoteData->id,)}}" ><svg xmlns="http://www.w3.org/2000/svg" width="35"
                                     height="35" viewBox="0 0 48 48">
                                     <mask id="ipSCheckOne0">
@@ -51,7 +52,7 @@
                                     </mask>
                                     <path fill="currentColor" d="M0 0h48v48H0z" mask="url(#ipSCheckOne0)" />
                                 </svg></a>
-
+                                    @endunless
                         </div>    
                     </div>
                 </div>

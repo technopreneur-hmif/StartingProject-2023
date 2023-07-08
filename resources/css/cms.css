@@ -232,51 +232,18 @@ main .box-info li .text p {
   margin-top: 20px;
 }
 
-.pie-chart {
-  background: radial-gradient(
-      circle closest-side,
-      white 0,
-      white 32.5%,
-      transparent 32.5%,
-      transparent 50%,
-      white 0
-    ),
-    conic-gradient(
-      #2f80ed 0,
-      #2f80ed 49.4%,
-      #f28e2c 0,
-      #f28e2c 79.3%,
-      #e15759 0,
-      #e15759 100%
-    );
+.card-for-piechart {
   position: relative;
   width: 45%;
   min-height: 350px;
   margin: 0;
   border-radius: 12px;
+  padding: 10px;
 }
-.pie-chart h2 {
+.card-for-piechart h2 {
   position: absolute;
   margin: 1rem;
-}
-.pie-chart figcaption {
-  position: absolute;
-  bottom: 1em;
-  right: 1em;
-  font-size: smaller;
-  text-align: right;
-}
-.pie-chart span:after {
-  display: inline-block;
-  content: "";
-  width: 0.8em;
-  height: 0.8em;
-  margin-left: 0.4em;
-  height: 0.8em;
-  border-radius: 0.2em;
-  background: currentColor;
-}
-
+} 
 footer {
   bottom: 0;
   background: #fff;

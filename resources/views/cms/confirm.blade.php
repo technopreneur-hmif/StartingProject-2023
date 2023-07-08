@@ -21,6 +21,7 @@ integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChi
                             <p>Username: {{ $VoteData->username }}</p>
                             <p>Role: {{ $VoteData->role }}</p>
                                 <div class="btn">
+
                                     <form action="{{ Route('move',$VoteData->id)}}" method="POST">
                                         @csrf
                                         <a id="btn-confirm"><button id="btn-confirm">Konfirmasi</button> </a>

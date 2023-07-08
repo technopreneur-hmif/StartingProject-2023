@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Models\User;
+use App\Models\VoteData;
 use App\Models\useraccept;
+use App\Models\VoteDataAccept;
 use Illuminate\Routing\Controller;
 use App\Http\Requests\StoreConfirmRequest;
 use App\Http\Requests\UpdateConfirmRequest;
-use App\Models\VoteData;
 
 class ConfirmController extends Controller
 {
@@ -40,18 +42,17 @@ class ConfirmController extends Controller
 
     public function move($id)
     {
-            $user = User::find($id);
+            $VoteDataAccept = VoteData::find($id);
         
-            Useraccept::create([
-                'nama_user' => $user->nama_user,
-                'email' => $user->email,
-                'username' => $user->username,
-                'password' => $user->password,
-                'role' => $user->role
+            VoteDataAccept::create([
+                'nama_user' => $VoteDataAccept->nama_user,
+                'email' => $VoteDataAccept->email,
+                'username' => $VoteDataAccept->username,
+                'role' => $VoteDataAccept->role,
+                'kandidat_id' => $VoteDataAccept->kandidat_id
             ]);
-        
-        
-        // Redirect kembali ke halaman konfirmasi
+
+        session(['moveRedirect' => true]);
         return redirect()->route('konfirmasi-pemilih.index');
     }
 
