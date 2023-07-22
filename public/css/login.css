@@ -16,7 +16,7 @@
 }
 
 body {
-  background-image: url("../assets/images/bg-login.svg");
+  background-image: url("/images/bg-login.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

@@ -12,7 +12,7 @@
                 </div>
                 <!-- Check settings for dependencies! -->
                 <div class="container">
-                    <form  method="POST" action="{{ Route('data-kandidat.store') }}">
+                    <form  method="POST" action="{{ Route('data-kandidat.store') }}" enctype="multipart/form-data">
                         @csrf
                         <label for="name">Nama Kandidat</label>
                         <input type="text" id="name" name="nama_kandidat" placeholder="Masukkan Nama" required>
@@ -29,8 +29,8 @@
                         <label for="misi">Misi Kandidat</label>
                         <input type="text" id="misi" name="misi_kandidat" placeholder="Masukkan Misi" required>
 
-                        <label for="foto">Foto Kandidat</label>
-                        <input type="text" id="foto" name="link_foto_kandidat" placeholder="Masukkan Link Foto" required>
+                        <label for="image">Foto Kandidat</label>
+                        <input type="file" id="image" name="link_foto_kandidat" placeholder="Masukkan Link Foto" required>
                       
                         <button class="btn-tambah-kandidat">Tambah</button>
                       </form>

@@ -6,32 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cara Voting</title>
 
-    <link rel="stylesheet" href="../style/cara-voting.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/logout.css" />
+
+    <link rel="stylesheet" href="/css/cara-voting.css" />
   </head>
   <body>
     <div class="container">
-      <nav>
-        <input id="nav-toggle" type="checkbox" />
-        <img
-          class="logo"
-          src="../assets/images/logo-web.svg"
-          height="60"
-          alt="logo-web"
-        />
-        <ul class="links">
-          <li><a href="./beranda.html" class="active-nav">Beranda</a></li>
-          <li>
-            <a href="./calon-kandidat.html">Calon Kandidat</a>
-          </li>
-          <li><a href="./cara-voting.html">Cara Voting</a></li>
-          <li><a href="./hasil-voting.html">Hasil Voting</a></li>
-        </ul>
-        <label for="nav-toggle" class="icon-burger">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </label>
-      </nav>
+      @include('partials.client-navbar')
 
       <section>
         <div class="container-tutorial">
@@ -73,21 +56,7 @@
         </div>
       </section>
 
-      <footer>
-        <div class="footer-nav">
-          <img src="../assets/images/logo-web.svg" height="60" alt="logo-web" />
-          <div class="foot-menu">
-            <a href="#" class="nav-item nav-link">Beranda</a>
-            <a href="#" class="nav-item nav-link">Calon Kandidat</a>
-            <a href="#" class="nav-item nav-link">Cara Voting</a>
-            <a href="#" class="nav-item nav-link">Hasil Voting</a>
-          </div>
-        </div>
-        <hr />
-        <div class="footer-copyright">
-          &copy; 2023 HMIF ITERA. All rights reserved.
-        </div>
-      </footer>
+      @include('partials.client-footer')
     </div>
   </body>
 

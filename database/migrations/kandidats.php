@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('prodi_Kandidat');
             $table->text('visi_kandidat');
             $table->text('misi_kandidat');
-            $table->text('link_foto_kandidat');
+            $table->string('link_foto_kandidat')->nullable();
             $table->string('created_at');
             $table->string('updated_at');
         });

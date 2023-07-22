@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('VoteDataAccepts', function (Blueprint $table) {
+        Schema::create('users', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->string('nama_user');
             $table->string('email')->unique();
-            $table->string('role');
             $table->string('username');
-            $table->foreignId('kandidat_id');
+            $table->string('password');
+            $table->string('role');
             $table->string('created_at');
             $table->string('updated_at');
         });
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('VoteDataAccepts');
+        Schema::dropIfExists('users');
     }
 };

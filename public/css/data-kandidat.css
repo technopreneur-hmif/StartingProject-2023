@@ -138,12 +138,34 @@ a:focus {
 input[type="text"],
 select {
   width: 100%;
+  height: fit-content;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+
+input[type="file"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=file]::file-selector-button {
+  margin-right: 20px;
+  border: none;
+  background: #2f80ed;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  transition: background .2s ease-in-out;
 }
 
 input[type="submit"] {

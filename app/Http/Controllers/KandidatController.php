@@ -20,14 +20,20 @@ class KandidatController extends Controller
 
     public function store(Request $request)
     {
-        Kandidat::create([
-            'nama_kandidat' => $request->nama_kandidat,
-            'tentang_kandidat' => $request->tentang_kandidat,
-            'prodi_Kandidat' =>$request->prodi_Kandidat,
-            'visi_kandidat' => $request->visi_kandidat,
-            'misi_kandidat' => $request->misi_kandidat,
-            'link_foto_kandidat' => $request->link_foto_kandidat
+        $validatedData = $request->validate([
+            'nama_kandidat' => 'required|max:255',
+            'tentang_kandidat' => 'required',
+            'prodi_Kandidat' => 'required',
+            'visi_kandidat' => 'required',
+            'misi_kandidat' => 'required',
+            'link_foto_kandidat' => 'image|file|max:1024'
         ]);
+
+        if($request->file('link_foto_kandidat')) {
+            $validatedData['link_foto_kandidat'] = $request->file('link_foto_kandidat')->store('foto-kandidat');
+        }
+
+        Kandidat::create($validatedData);
 
         return view('cms.data-kandidat', ['title' => 'data-kandidat'])->with('success', 'User berhasil ditambahkan!');
     }

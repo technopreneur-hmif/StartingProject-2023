@@ -5,40 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Beranda</title>
-
-    <link rel="stylesheet" href="../style/beranda.css" />
-  </head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous" />
+    <link rel="stylesheet" href="/css/logout.css" />
+    <link rel="stylesheet" href="/css/beranda.css" />
+</head>
   <body>
     <div class="container">
-      <nav>
-        <input id="nav-toggle" type="checkbox" />
-        <img
-          class="logo"
-          src="../assets/images/logo-web.svg"
-          height="60"
-          alt="logo-web"
-        />
-        <ul class="links">
-          <li><a href="./beranda.html" class="active-nav">Beranda</a></li>
-          <li>
-            <a href="./calon-kandidat.html">Calon Kandidat</a>
-          </li>
-          <li><a href="./cara-voting.html">Cara Voting</a></li>
-          <li><a href="./hasil-voting.html">Hasil Voting</a></li>
-        </ul>
-        <label for="nav-toggle" class="icon-burger">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="line"></div>
-        </label>
-      </nav>
+
+      @include('partials.client-navbar')
 
       <header>
         <div class="bg-header">
           <div class="card-header">
             <h1>Pemira KM Itera 2023</h1>
             <p>Pemilihan Raya Keluarga Mahasiswa Institut Teknologi Sumatera</p>
-            <button type="button" id="btn-vote">Vote</button>
+            @can('pemilih')
+              <a href="/page-vote" id="btn-vote">Vote</a>
+            @else
+              <a href="#" id="btn-vote">Vote</a>
+            @endcan
           </div>
         </div>
       </header>
@@ -80,21 +66,8 @@
         </div>
       </section>
 
-      <footer>
-        <div class="footer-nav">
-          <img src="../assets/images/logo-web.svg" height="60" alt="logo-web" />
-          <div class="foot-menu">
-            <a href="#" class="nav-item nav-link">Beranda</a>
-            <a href="#" class="nav-item nav-link">Calon Kandidat</a>
-            <a href="#" class="nav-item nav-link">Cara Voting</a>
-            <a href="#" class="nav-item nav-link">Hasil Voting</a>
-          </div>
-        </div>
-        <hr />
-        <div class="footer-copyright">
-           &copy; 2023 HMIF ITERA. All rights reserved.
-        </div>
-      </footer>
+      @include('partials.client-footer')
+
     </div>
   </body>
 </html>

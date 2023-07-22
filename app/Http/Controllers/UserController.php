@@ -55,23 +55,37 @@ class UserController extends Controller
         ]);
     }
     public function store(Request $request)
-    {       
+    {
+        $validatedData = $request->validate(
+            [
+                'nama_user' => 'required|max:255',
+                'email' => 'required|email:rfc,dns|unique:users',
+                'username' => ['required', 'min:3', 'max:255', 'unique:users'],
+                'password' => 'required|min:5|max:255',
+                'role' => 'required'
+            ]
+        );
 
-        $validatedData = $request->validate([
-            'email' => [
-                'required',
-                'email',
-                Rule::unique('users', 'email'),
-            ],
-        ]);
+        //$validatedData['password'] = bcrypt($validatedData['password']);
+        $validatedData['password'] = Hash::make($validatedData['password']);
 
-        User::create([
-            'nama_user' => $request->nama_user,
-            'email' => $request->email,
-            'username' =>$request->username,
-            'password' => Hash::make($request->Password),
-            'role' => $request->role
-        ]);
+        User::create($validatedData);
+        
+        // $validatedData = $request->validate([
+        //     'email' => [
+        //         'required',
+        //         'email',
+        //         Rule::unique('users', 'email'),
+        //     ],
+        // ]);
+
+        // dd(User::create([
+        //     'nama_user' => $request->nama_user,
+        //     'email' => $request->email,
+        //     'username' =>$request->username,
+        //     'password' => Hash::make($request->Password),
+        //     'role' => $request->role
+        // ]));
         return view('cms.data-user', ['title' => 'data-user'])->with('success', 'User berhasil ditambahkan!');
     }
     public function destroy($id)
