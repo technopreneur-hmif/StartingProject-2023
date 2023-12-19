@@ -1,0 +1,9 @@
+nav .links button {
+    display: block;
+    padding: 0.5rem;
+    font-size: 16px;
+    color: var(--mint);
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+}

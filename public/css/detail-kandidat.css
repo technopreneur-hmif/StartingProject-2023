@@ -1,0 +1,449 @@
+:root {
+  --jungle-green: #55a078;
+  --bg-green: #2b9563;
+  --mint: #f2f8f4;
+  --pearl: #eadda8;
+  --yellow: #ffca07;
+  --biru: #0d0d2d;
+  --black: #202020;
+  --purple: #ff2eea;
+}
+
+body {
+  background-image: linear-gradient(
+    350deg,
+    hsl(235deg 64% 11%) 14%,
+    hsl(268deg 48% 19%) 55%,
+    hsl(302deg 51% 24%) 71%,
+    hsl(323deg 66% 34%) 81%,
+    hsl(335deg 72% 44%) 88%,
+    hsl(337deg 76% 49%) 94%,
+    hsl(328deg 99% 44%) 98%,
+    hsl(322deg 100% 45%) 100%,
+    hsl(315deg 100% 44%) 101%,
+    hsl(306deg 89% 45%) 101%
+  );
+  overflow-x: hidden;
+}
+
+nav {
+  position: fixed;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 1% 5%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+nav .logo {
+  float: left;
+  display: flex;
+  align-items: center;
+}
+nav .links {
+  float: right;
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+  width: 60%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+nav .links li {
+  list-style: none;
+}
+nav .links a {
+  display: block;
+  padding: 0.5rem;
+  font-size: 16px;
+  color: var(--mint);
+  text-decoration: none;
+}
+.active-nav {
+  background-color: var(--yellow);
+  border-radius: 0.5rem;
+  color: var(--black);
+}
+#nav-toggle {
+  position: absolute;
+  top: -100px;
+}
+nav .icon-burger {
+  display: none;
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+nav .icon-burger .line {
+  width: 30px;
+  height: 5px;
+  background-color: var(--mint);
+  margin: 5px;
+  border-radius: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.title {
+  color: white;
+  margin: 12rem 0 6rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.title h1 {
+  font-size: 42px;
+}
+
+.kandidat-card {
+  display: flex;
+  flex-direction: row;
+  background-image: linear-gradient(
+    345deg,
+    hsl(47deg 100% 51%) 1%,
+    hsl(46deg 100% 61%) 49%,
+    hsl(45deg 100% 66%) 66%,
+    hsl(45deg 100% 71%) 76%,
+    hsl(44deg 100% 75%) 84%,
+    hsl(44deg 100% 80%) 90%,
+    hsl(44deg 100% 84%) 95%,
+    hsl(44deg 100% 88%) 98%,
+    hsl(44deg 100% 92%) 100%,
+    hsl(44deg 100% 96%) 102%,
+    hsl(0deg 0% 100%) 101%
+  );
+  margin: 6rem;
+  border-radius: 1.5rem;
+  padding: 2rem;
+}
+
+.deskripsi-kandidat {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 2rem;
+}
+
+.deskripsi-kandidat h2 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.deskripsi-kandidat p {
+  font-size: 16px;
+  margin: 2rem 0;
+}
+
+#btn-lihat-detail {
+  background-color: var(--biru);
+  color: white;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 1rem;
+  font-size: 24px;
+  border: none;
+  font-weight: bold;
+  max-width: 50%;
+}
+
+.visi-misi {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 6rem;
+  margin: 0 0 6rem 0;
+}
+
+.visi-misi-kandidat {
+  background-color: rgba(255, 202, 7, 0.2);
+  padding: 2rem;
+  width: 36%;
+  border-radius: 1.5rem;
+}
+
+.title-visi-misi {
+  color: var(--mint);
+  font-size: 24px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.isi-visi-misi {
+  color: var(--mint);
+  font-size: 16px;
+}
+
+#vote {
+  display: flex;
+  justify-content: center;
+}
+
+#btn-vote {
+  background-color: var(--yellow);
+  color: var(--black);
+  padding: 1rem 6rem 1rem 6rem;
+  border-radius: 1rem;
+  font-size: 24px;
+  border: none;
+  font-weight: bold;
+  max-width: 50%;
+  margin: 0 0 6rem 0;
+  text-decoration: none;
+}
+
+footer {
+  background-color: var(--black);
+  padding: 2rem 6rem;
+  color: var(--pearl);
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+}
+
+.foot-menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    position: fixed;
+    z-index: 1;
+    padding: 0 5%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+  }
+  nav .logo {
+    float: left;
+    display: flex;
+    align-items: center;
+  }
+  nav .links {
+    position: fixed;
+    float: right;
+    top: 0;
+    z-index: -10;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: linear-gradient(var(--yellow), var(--purple));
+  }
+  nav .links li {
+    list-style: none;
+  }
+  nav .links a {
+    display: block;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 2px 2px #ffca07;
+  }
+  #nav-toggle {
+    position: absolute;
+  }
+  nav .icon-burger {
+    display: none;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  nav .icon-burger .line {
+    width: 30px;
+    height: 5px;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in-out;
+    z-index: 100;
+  }
+  @media screen and (max-width: 1024px) {
+    nav .logo {
+      float: none;
+      width: auto;
+      justify-content: center;
+    }
+    nav .links {
+      float: none;
+      position: fixed;
+      z-index: -10;
+      left: 0;
+      right: 0;
+      bottom: 100%;
+      width: auto;
+      height: auto;
+      flex-direction: column;
+      justify-content: space-evenly;
+      overflow: hidden;
+      transition: all 0.5s ease-in-out;
+    }
+    nav .links a {
+      font-size: 32px;
+      text-align: center;
+    }
+    .active-nav {
+      background: linear-gradient(
+        90deg,
+        rgba(255, 202, 7, 1) 0%,
+        rgba(255, 202, 7, 0) 86%
+      );
+      width: 100vw;
+      border-radius: 0;
+    }
+    nav :checked ~ .links {
+      bottom: 0;
+    }
+    nav .icon-burger {
+      display: block;
+    }
+    nav :checked ~ .icon-burger .line:nth-child(1) {
+      transform: translateY(10px) rotate(225deg);
+    }
+    nav :checked ~ .icon-burger .line:nth-child(3) {
+      transform: translateY(-10px) rotate(-225deg);
+    }
+    nav :checked ~ .icon-burger .line:nth-child(2) {
+      opacity: 0;
+    }
+  }
+}
+
+@media (max-width: 990px) {
+  .kandidat-card {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+  }
+}
+
+@media (max-width: 650px) {
+  .kandidat-card {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0.4rem;
+    border-radius: 1rem;
+    padding: 0rem;
+  }
+
+  .visi-misi {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .visi-misi-kandidat {
+    background-color: rgba(255, 202, 7, 0.2);
+    padding: 2rem;
+    width: 90%;
+    border-radius: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar-container input[type="checkbox"]:checked ~ .logo {
+    display: none;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .title {
+    margin: 8rem 0 2rem 0;
+  }
+
+  .title h1 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .kandidat-card {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 0.4rem;
+    border-radius: 1rem;
+    padding: 0rem;
+  }
+
+  .kandidat-card img {
+    border-radius: 1rem;
+  }
+
+  .deskripsi-kandidat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 2rem;
+  }
+
+  .deskripsi-kandidat h2 {
+    font-weight: bold;
+    font-size: 24px;
+  }
+
+  .deskripsi-kandidat p {
+    font-size: 16px;
+    margin: 2rem 0;
+  }
+
+  .visi-misi {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .visi-misi-kandidat {
+    background-color: rgba(255, 202, 7, 0.2);
+    padding: 2rem;
+    width: 90%;
+    border-radius: 1rem;
+  }
+
+  .title-visi-misi {
+    color: var(--mint);
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .isi-visi-misi {
+    color: var(--mint);
+    font-size: 16px;
+  }
+
+  #vote {
+    display: flex;
+    justify-content: center;
+  }
+
+  #btn-vote {
+    max-width: 100%;
+    margin: 0 0 4rem 0;
+  }
+
+  footer {
+    padding: 2rem 1rem;
+  }
+
+  .footer-nav {
+    display: none;
+  }
+}
